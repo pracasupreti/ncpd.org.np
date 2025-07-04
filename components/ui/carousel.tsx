@@ -4,27 +4,27 @@ import Image from "next/image";
 
 const slides = [
   {
-    image: "/home/ncpd-conference-2019-session.jpg",
+    image: "/carousel/ncpd-conference-2019-session.jpg",
     title: "1ST NATIONAL PHILANTHROPY AND FUNDRAISING CONFERENCE",
     button: "Read More",
   },
   {
-    image: "/home/ncpd-conference-kathmandu-2019-Inagu.jpeg",
+    image: "/carousel/ncpd-conference-kathmandu-2019-Inagu.jpeg",
     title: "1ST NATIONAL PHILANTHROPY AWARD PROVIDED TO MAYOR VAYAS MUNICIPALITY AND BEHALF OF THE ANCIENT PHILANTHROPIST GHASI (GRASSCUTTER).",
     button: "Read More",
   },
   {
-    image: "/home/what-is-philanthropy-bekay-ahn.jpg",
+    image: "/carousel/what-is-philanthropy-bekay-ahn.jpg",
     title: "PROF. BEKAY AHN PRESENTING ON THE GLOBAL PHILANTHROPY TRENDS AND PRACTICES.",
     button: "Read More",
   },
   {
-    image: "/home/Networking-Among-Philanthropy-Actors-Nepal.jpg",
+    image: "/carousel/Networking-Among-Philanthropy-Actors-Nepal.jpg",
     title: "OFFERING NETWORKING OPPORTUNITIES FOR PHILANTHROPY ACTORS.",
     button: "Read More",
   },
   {
-    image: "/home/ncpd-certified-campaign-manager-certification-distribution-program.jpeg",
+    image: "/carousel/ncpd-certified-campaign-manager-certification-distribution-program.jpeg",
     title: "CERTIFIED FUND RAISING SPECIALIST (CFRS).",
     button: "Read More",
   },
