@@ -4,28 +4,28 @@ import Image from "next/image";
 
 const slides = [
   {
-    image: "/img1.jpg",
-    title: "OFFERING NETWORKING OPPORTUNITIES FOR PHILANTHROPY ACTORS",
+    image: "/home/ncpd-conference-2019-session.jpg",
+    title: "1ST NATIONAL PHILANTHROPY AND FUNDRAISING CONFERENCE",
     button: "Read More",
   },
   {
-    image: "/img2.jpg",
-    title: "EMPOWERING COMMUNITIES THROUGH COLLABORATION",
+    image: "/home/ncpd-conference-kathmandu-2019-Inagu.jpeg",
+    title: "1ST NATIONAL PHILANTHROPY AWARD PROVIDED TO MAYOR VAYAS MUNICIPALITY AND BEHALF OF THE ANCIENT PHILANTHROPIST GHASI (GRASSCUTTER).",
     button: "Read More",
   },
   {
-    image: "/img3.jpg",
-    title: "BUILDING STRONGER CONNECTIONS FOR IMPACT",
+    image: "/home/what-is-philanthropy-bekay-ahn.jpg",
+    title: "PROF. BEKAY AHN PRESENTING ON THE GLOBAL PHILANTHROPY TRENDS AND PRACTICES.",
     button: "Read More",
   },
   {
-    image: "/img4.jpg",
-    title: "FOSTERING PARTNERSHIPS FOR SUSTAINABLE DEVELOPMENT",
+    image: "/home/Networking-Among-Philanthropy-Actors-Nepal.jpg",
+    title: "OFFERING NETWORKING OPPORTUNITIES FOR PHILANTHROPY ACTORS.",
     button: "Read More",
   },
   {
-    image: "/img5.jpg",
-    title: "CREATING CHANGE THROUGH NETWORKED ACTION",
+    image: "/home/ncpd-certified-campaign-manager-certification-distribution-program.jpeg",
+    title: "CERTIFIED FUND RAISING SPECIALIST (CFRS).",
     button: "Read More",
   },
 ];
@@ -47,7 +47,7 @@ const ImageCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className="relative w-full h-screen pt-[80px] overflow-hidden">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -64,11 +64,11 @@ const ImageCarousel: React.FC = () => {
             className="brightness-75"
             priority
           />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold max-w-3xl mx-auto">
+          <div className="absolute top-[70%] left-[40%] transform -translate-x-1/2 -translate-y-1/2 text-primary text-left px-4">
+            <h2 className="text-xl sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto">
               {slide.title}
             </h2>
-            <button className="mt-4 px-6 py-2 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full border border-white text-white transition">
+            <button className="mt-6 px-6 py-2 bg-none bg-opacity-50 hover:bg-opacity-70 rounded-full border-2 border-primary text-white transition">
               {slide.button}
             </button>
           </div>
@@ -76,15 +76,15 @@ const ImageCarousel: React.FC = () => {
       ))}
 
       {/* Dots */}
-      <div className="absolute bottom-6 right-6 flex gap-3 z-20">
+      <div className="absolute bottom-30 right-30 flex gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? "bg-blue-500 w-6 h-2"
-                : "bg-white w-3 h-2"
+                ? "bg-primary w-6 h-2"
+                : "bg-white hover:bg-green-400 w-3 h-2"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

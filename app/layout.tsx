@@ -1,23 +1,31 @@
-import Header from "@/components/header"
-import "./globals.css"
-import Footer from "@/components/footer"
+import Header from "@/components/header";
+import "./globals.css";
+import { Poppins } from 'next/font/google'
+import Footer from "@/components/footer";
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
+
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.className}>
       <head>
         <link rel="icon" href="/logo.png" />
         <title>Nepal Center for Philanthropy and Development</title>
       </head>
-      <body className="bg-gray-100 text-gray-900">
+      <body>
         <Header />
-          {children}
-          <Footer />
+        {children}
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
