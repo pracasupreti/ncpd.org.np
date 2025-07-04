@@ -25,7 +25,7 @@ export default function LatestTrainingPage() {
           {/* Image */}
             <div className="lg:w-1/2 relative h-64 lg:h-auto overflow-hidden group">
             <Image
-              src="/home/latest.jpeg"
+              src="/training/latest.jpeg"
               alt="Certified Fund Raising Specialist Training"
               layout="fill"
               className="rounded-3xl lg:rounded-3xl transition-transform duration-300 group-hover:scale-110"
