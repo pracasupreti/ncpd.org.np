@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
 import LogoSection from '@/components/ui/logo';
 
 const ContactPage: React.FC = () => {
