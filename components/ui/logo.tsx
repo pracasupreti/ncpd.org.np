@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function LogoSection() {
     return (
-        <section className="container mx-auto px-4 md:px-12 py-12 flex flex-row flex-nowrap justify-around items-center gap-8 mt-24 overflow-x-auto">
+        <section className="container max-w-7xl mx-auto px-4 md:px-12 py-12 flex flex-col lg:flex-row justify-center items-center gap-8 mt-24 overflow-hidden">
             <a
                 href="http://www.mangopost.org/"
                 target="_blank"

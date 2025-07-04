@@ -16,7 +16,8 @@ export default function StrengtheningNetworksPage() {
 
       {/* Main Contact Section */}
       <main className="container mx-auto px-6 md:px-70 py-2">
-        <h2 className="text-xl mb-6 text-gray-700">We dialogue and advocate for enabling environment; integrated societal norms, policies and infrastructure that fosters philanthropy in Nepal. </h2>
+        <h2 className="text-xl mb-6 text-gray-700">We connect key stakeholders to foster synergies – both within Nepal and globally, 
+          so that the power of human connections can nurture a better future for all. </h2>
       </main>
         {/* Partner Logos Section */}
         <LogoSection />

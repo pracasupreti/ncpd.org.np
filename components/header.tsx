@@ -1,49 +1,19 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
-export default function App() {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null); // State to manage active dropdown on hover
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    // Function to handle scroll event
-    const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust scroll threshold as needed
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to toggle mobile menu
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  // Function to handle dropdown hover (for desktop)
-  const handleMouseEnter = (menuName: string) => {
-    setActiveDropdown(menuName);
-  };
-
-  // Function to handle dropdown mouse leave (for desktop)
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-
-  // Common styling for hover effect
-  const hoverStyle = "hover:underline hover:underline-offset-4 hover:decoration-green-500 hover:decoration-2";
-  const activeLinkStyle = "underline underline-offset-4 decoration-green-500 decoration-2";
+  const toggleMobileMenu = () => setMobileOpen(!mobileOpen);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -77,76 +47,66 @@ export default function App() {
   ];
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 shadow-md ${isScrolled ? 'h-16 bg-white shadow-md' : 'h-32 bg-white'}`}>
-      <div className={`flex items-center space-x-36 h-full px-4 md:px-8 lg:px-32 ${isScrolled ? 'py-0' : 'py-0'}`}>
+    <header className={`fixed w-full z-50 bg-white transition-all duration-300 ${isScrolled ? "shadow-md h-16" : "h-28"}`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-full">
         {/* Logo */}
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          className={`transition-all duration-300 ${isScrolled ? 'h-12 w-auto' : 'h-28 w-38'}`}
-          height={94}
-          width={128}
-          sizes="(max-width: 768px) 48px, 128px"
-          priority
-        />
+        <a href="/">
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={isScrolled ? 100 : 140}
+            height={isScrolled ? 40 : 60}
+            priority
+            quality={100}
+            className="h-auto w-auto transition-all duration-300"
+          />
+        </a>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-black focus:outline-none">
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+        {/* Toggle Button for sm and md */}
+        <div className="lg:hidden">
+          <button onClick={toggleMobileMenu} aria-label="Toggle Menu">
+            <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6 lg:space-x-6">
+        {/* Desktop Menu */}
+        <nav className="hidden lg:block">
+          <ul className="flex space-x-8 items-center font-medium text-black">
             {navItems.map((item) => (
-              <li
-                key={item.name}
-                className="relative group text-black"
-                onMouseEnter={() => item.dropdown && handleMouseEnter(item.name)} // Only apply hover for dropdowns
-                onMouseLeave={() => item.dropdown && handleMouseLeave()} // Only apply hover for dropdowns
-              >
+              <li key={item.name} className="relative group">
                 {item.dropdown ? (
                   <>
-                    <button
-                      className={`font-bold focus:outline-none flex items-center ${hoverStyle} ${activeDropdown === item.name ? activeLinkStyle : ''}`}
-                    >
+                    <button className="relative font-semibold group text-black">
                       {item.name}
-                      <svg
-                        className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                      <svg className="ml-1 w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
+                      {/* underline animation */}
+                      <span className="absolute left-0 bottom-[-2px] h-0.5 bg-green-500 w-0 group-hover:w-full transition-all duration-300"></span>
                     </button>
-                    {activeDropdown === item.name && (
-                      <ul className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-10">
-                        {item.dropdown.map((dropdownItem) => (
-                          <li key={dropdownItem.name}>
-                            <a
-                              href={dropdownItem.href}
-                              className={`block px-4 py-2 text-sm text-black ${hoverStyle}`}
-                            >
-                              {dropdownItem.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    <ul className="absolute left-0 top-full w-56 bg-white border-t-4 border-green-500 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-30">
+                      {item.dropdown.map((subItem) => (
+                        <li key={subItem.name}>
+                          <a
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition"
+                          >
+                            {subItem.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
                   </>
                 ) : (
-                  <a href={item.href} className={`font-bold ${hoverStyle}`}>
+                  <a href={item.href} className="relative font-semibold group text-black">
                     {item.name}
+                    <span className="absolute left-0 bottom-[-2px] h-0.5 bg-green-500 w-0 group-hover:w-full transition-all duration-300"></span>
                   </a>
                 )}
               </li>
@@ -155,55 +115,59 @@ export default function App() {
         </nav>
       </div>
 
-      {/* Mobile Navigation (Conditional Rendering - still click-based for mobile) */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg py-2">
-          <ul className="flex flex-col items-center space-y-2">
-            {navItems.map((item) => (
-              <li key={item.name} className="w-full text-center text-black">
-                {item.dropdown ? (
-                  <>
-                    {/* For mobile, keep click-based toggle for dropdowns */}
-                    <button
-                      onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                      className={`font-bold w-full py-2 focus:outline-none flex items-center justify-center ${hoverStyle} ${activeDropdown === item.name ? activeLinkStyle : ''}`}
-                    >
-                      {item.name}
-                      <svg
-                        className={`ml-1 w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </button>
-                    {activeDropdown === item.name && (
-                      <ul className="bg-gray-100 py-1">
-                        {item.dropdown.map((dropdownItem) => (
-                          <li key={dropdownItem.name}>
-                            <a
-                              href={dropdownItem.href}
-                              className={`block px-4 py-2 text-sm text-black ${hoverStyle}`}
-                            >
-                              {dropdownItem.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </>
-                ) : (
-                  <a href={item.href} className={`font-bold block py-2 ${hoverStyle}`}>
+      {/* Mobile/Tablet Menu */}
+      <div
+        className={`lg:hidden overflow-hidden bg-white transition-all text-black duration-300 ${
+          mobileOpen ? "max-h-[1000px] py-4" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col space-y-2 px-6">
+          {navItems.map((item) => (
+            <li key={item.name}>
+              {item.dropdown ? (
+                <>
+                  <button
+                    onClick={() =>
+                      setActiveMobileDropdown(activeMobileDropdown === item.name ? null : item.name)
+                    }
+                    className="w-full flex justify-between items-center font-semibold text-left"
+                  >
                     {item.name}
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                    <svg
+                      className={`w-4 h-4 transform transition-transform ${
+                        activeMobileDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {activeMobileDropdown === item.name && (
+                    <ul className="border-t-4 border-green-500 rounded-md bg-gray-50 mt-1">
+                      {item.dropdown.map((subItem) => (
+                        <li key={subItem.name}>
+                          <a
+                            href={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200 transition"
+                          >
+                            {subItem.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <a href={item.href} className="block font-semibold py-1">
+                  {item.name}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 }
