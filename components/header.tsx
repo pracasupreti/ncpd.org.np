@@ -47,7 +47,7 @@ export default function Header() {
   ];
 
   return (
-    <header className={`fixed w-full z-50 bg-white transition-all duration-300 ${isScrolled ? "shadow-md h-16" : "h-28"}`}>
+    <header className={`fixed w-full z-50 bg-white shadow-md transition-all duration-300 ${isScrolled ? "shadow-md h-16" : "h-28"}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-full">
         {/* Logo */}
         <a href="/">

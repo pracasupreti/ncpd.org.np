@@ -72,7 +72,7 @@ const TrainingsPage: React.FC = () => {
                 {training.title}
               </h2>
               {training.description && (
-                <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base mt-2">
+                <ul className="list-disc text-gray-700 text-sm sm:text-sm">
                   {training.description.map((desc, idx) => (
                     <li key={idx}>{desc}</li>
                   ))}
