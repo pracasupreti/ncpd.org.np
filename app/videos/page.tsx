@@ -1,6 +1,5 @@
 "use client";
 import LogoSection from '@/components/ui/logo';
-import Image from 'next/image';
 import React from 'react';
 
 // Define the Video interface
@@ -59,12 +58,15 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => (
 const VideoGalleryPage: React.FC = () => {
     return (
         <div className="min-h-screen bg-gray-50 font-inter antialiased flex flex-col">
-            <header className="py-4 pt-40 px-6 md:px-12 bg-white">
+            <header className="py-3 pt-36 px-6 md:px-12 bg-white">
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-center mb-4 md:mb-0 text-black">Video Gallery</h1>
           <p className="text-base text-black px-20 py-2">
-            Home / Video
-          </p>
+            <a href="/" className="text-blue-600 hover:underline">
+               Home
+              </a>{" "}
+               / Video
+            </p>
         </div>
       </header>
 

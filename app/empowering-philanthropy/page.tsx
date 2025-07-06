@@ -9,7 +9,10 @@ export default function EmpoweringPhilanthropyPage() {
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-center mb-4 md:mb-0">Empowering Philanthropy</h1>
           <p className="text-base text-black px-20 py-4">
-            Home / <span className="text-red-500">Empowering Philanthropy</span>
+            <a href="/" className="text-blue-600 hover:underline">
+        Home
+        </a>{""}
+       <span className="text-red-500"> / Empowering Philanthropy</span>
           </p>
         </div>
       </header>
