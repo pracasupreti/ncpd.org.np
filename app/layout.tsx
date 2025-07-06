@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang="en" className={poppins.className}>
       <head>
         <link rel="icon" href="/logo.png" />
-        
         <title>Nepal Center for Philanthropy and Development</title>
       </head>
       <body>
