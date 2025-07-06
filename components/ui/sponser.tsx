@@ -112,7 +112,7 @@ const Sponsor: React.FC = () => {
             height={75}
           />
           <Image
-            src="/sponsers/Motif(1).jpg"
+            src="/sponsers/motif.jpg"
             alt="Motif"
             width={120}
             height={60}
