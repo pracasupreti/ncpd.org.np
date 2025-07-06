@@ -77,7 +77,7 @@ const ImageCarousel: React.FC = () => {
       ))}
 
       {/* Dots */}
-      <div className="absolute bottom-30 right-30 flex gap-3 z-20">
+      <div className="absolute bottom-10 left-1/2 flex gap-3 z-20 ">
         {slides.map((_, index) => (
           <button
             key={index}
