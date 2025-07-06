@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 const slides = [
   {
@@ -68,15 +68,16 @@ const ImageCarousel: React.FC = () => {
             <h2 className="text-xl sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto">
               {slide.title}
             </h2>
-            <button className="mt-6 px-6 py-2 bg-none bg-opacity-50 hover:bg-opacity-70 rounded-full border-2 border-primary text-white transition">
-              {slide.button}
-            </button>
+           <button className="mt-6 px-6 py-2 bg-none rounded-full border-2 border-primary text-white transition hover:bg-primary hover:text-white hover:border-primary cursor-pointer">
+            {slide.button}
+          </button>
+
           </div>
         </div>
       ))}
 
       {/* Dots */}
-      <div className="absolute bottom-30 right-30 flex gap-3 z-20">
+      <div className="absolute bottom-10 left-1/2 flex gap-3 z-20 ">
         {slides.map((_, index) => (
           <button
             key={index}
