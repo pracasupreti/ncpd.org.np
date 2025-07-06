@@ -1,9 +1,14 @@
 "use client";
+import Image from 'next/image';
 import LogoSection from '@/components/ui/logo';
 import MapSection from '@/components/ui/map';
 import AliyahProfile from '@/components/ui/ms.aliyah';
 import Sponsor from '@/components/ui/sponser';
 import React, { useState } from 'react';
+import { ImRocket } from 'react-icons/im';
+import SpeakerSection from '@/components/ui/speakers';
+import PresentationList from '@/components/ui/presentationList';
+import AreaPresentationList from '@/components/ui/areaPresentationList';
 
 const National: React.FC = () => {
     const [activeTab, setActiveTab] = useState<string>('Background');
@@ -15,52 +20,87 @@ const National: React.FC = () => {
                 return (
                     <>
                         <p className="text-gray-700 leading-relaxed mt-4">
-                            The share of foreign aid in the national budget was 22% in FY 2017/18, compared to nearly 29% in FY 2016/17. It shows that Nepal now faces the challenge of mobilizing more resources for, inter alia, graduating to the developing country status by 2022, achieving Sustainable Development Goals by 2030, and fulfilling the universally recognized economic, cultural and social rights that are now enshrined as fundamental rights in the Constitution.
-                        </p>
+                            The level of investment and collaboration from the development partners in Nepal has been gradually decreasing in the recent years. This scenario has been particularly felt after the course of reconstruction efforts in 2016-17 after the devastating earthquake that rattled the country in April and May 2015.</p>
                         <p className="text-gray-700 leading-relaxed mt-4">
-                            I/NGOs are playing crucial roles in Nepal, however financial distress and vulnerability are common for many I/NGO leaders, with more organizations closing as a result of these financial constraints after 2017.
-                        </p>
+                            One of the main reasons for resource crunch is the shifting of donors' priority from Nepal to other global issues like the refugee, migration, trafficking, combating terrorism, global warming etc. In addition, there is also hope among development partners that the current government will itself tackle the current development given the context of its stability. Consequently, the development cooperation partners are diverting their resources and attention to other countries especially in the conflict affected regions.</p>
                         <p className="text-gray-700 leading-relaxed mt-4">
-                            I/NGOs working in Nepal had also learned a critical lesson about the importance of revenue diversification during the global recession in early 2000 and early 2010. Organizations that were dependent on just one or two funding sources had to fight for their survival. The lesson is age-old: Don’t put all of your funding eggs in one basket.
-                        </p>
+                            However, Nepal still remains one of the poorest countries in South Asia and there are numerous issues to be resolved by civil society organizations in an aftermath of the decade-long arms conflict, devastating earthquake and new political structure which have high liquidity along with numerous other socio-economic issues that are unaddressed.</p>
                         <p className="text-gray-700 leading-relaxed mt-4">
-                            As resources become more limited and demand increases, the topics of how to raise and grow funding sources and sustain a program are of utmost importance. Therefore, I/NGOs have to take concrete and deliberate efforts to diversify revenue streams to mitigate the risk of losing any single source of funding. Considering these challenges, Nepal Center for Philanthropy and Development (NCPD) has designed a one day training "Keys to Fundraising Success and Capacity Building" for the executive level human resource of I/NGOs in Nepal.
-                        </p>
+                            But the current CSOs/NGOs functioning in different parts of Nepal are struggling to generate resources and hence sustain their mission. There is also a high competition for resources between CSOs in Nepal that has resulted in ceasing of the work after the end of funding. In this present context, there is a high need to empower CSOs as well as INGOs in the resource mobilization arena.</p>
                         <p className="text-gray-700 leading-relaxed mt-4">
-                            The participants of the training will be able to explore and tap new funding opportunities for sustainability. It offers international experts with good track records, tailored training content considering the need of I/NGOs in Nepal, and a co-learning and effective networking environment with experts and leaders from the development fraternity.
-                        </p>
+                            With this in mind, The Nepal Center for Philanthropy and Development (NCPD) is pleased to present two-days conference on the topic of Fundraising. The conference is designed to provide knowledge, skills, and networks and enable participants to identify resources and opportunities, devise and implement resource mobilization strategies to bring along needed resources in order to sustain their noble mission. This conference will also shed light on the urgency to overcome the trust deficit and elevate the current image of the Nepalese CSOs which is a key to ensure resources and sustainability. Similarly, conference will also introduce with the national and international level prominent CSO actors, philanthropists, scholars, academia, fundraisers, resource mobilization experts, leaders and motivational speakers which will accelerate their nonprofit mission.</p>
                     </>
                 );
             case 'Objective':
-                return <p className="text-gray-700">To enable I/NGO executives to diversify funding opportunities for their organizations.</p>;
+                return <p className="text-gray-700"><ol className='list-decimal'>
+                    <li>To provide the knowledge on the importance and current global trend of philanthropy and fundraising among CSOs actors.</li>
+                    <li>To create a platform where philanthropists, fundraisers, donors and CSO actors from Nepal and abroad network to create solid foundation of collaboration.</li>
+                    <li>To introduce and aware on the existing opportunities of funding/resources for their CSOs.</li>
+                    <li>To provide knowledge, tools and techniques of fundraising to CSOs in order to generate and diversify the source of fund to their organizations.</li>
+                    <li>To identify the opportunities and challenges of promoting the philanthropy and fundraising in Nepal.</li>
+                </ol></p>;
             case 'Areas/Topics':
                 return (
-                    <ul className="list-disc pl-6 text-gray-700">
-                        <li>Donor management - how do you retain existing donors and identify new ones?</li>
-                        <li>Storytelling. How do you showcase your INGO/NGO?</li>
-                        <li>Small and Big Fundraising Ideas.</li>
-                        <li>Using PR and Social Media to Brand your INGO/NGO. How do donors react and what do they want?</li>
-                    </ul>
+                    <AreaPresentationList/>
                 );
             case 'Schedule':
-                return <p className="text-gray-700">Schedule</p>;
+                return (
+                    <div>
+                        <Image
+                            src="/speakers/Program Schedule_NCPD.png"
+                            alt="Program Schedule"
+                            height={500}
+                            width={800}
+                            className="mx-auto"
+                        />
+                    </div>
+                );
             case 'Registration':
                 return (
                     <div className="text-gray-700 space-y-2">
-                        <p>Please visit our website www.ncpd.org.np or email us at info@ncpd.org.np by 23 May, 2019. The seats will be secured on a first come first served basis.</p>
-                        <p>INGO 8500/- and NGOs 6500/- (Including all taxes). It covers training materials, lunch, and an internationally recognized Certified Fund Raising Executive certificate.</p>
+                        <p>The registration fee for the two days conference including VAT will be as follows: </p>
+                        <p>INGOs 17,000/- NRS (Seventeen Thousand Only) per person - 40 Seats Only.</p>
+                        <p>NGOs 10,000/- NRS (Ten Thousand Only) per person - 40 Seats Only.</p>
+                        <p><span className='font-semibold'>Payment Via Bank:</span>
+                            Bank: Nepal Investment Bank Ltd., Account: Nepal Center for Philanthropy & Development, Account No: 00401010264303</p>
+                        <p><span className='font-semibold'>Payment Via eSewa:</span>
+                            eSewa ID: 9842026513
+                            <ul className='list-disc'>
+                                <li>It includes stationary, training contents, breakfast, lunch, hi-tea during the two days of training.</li>
+                                <li>The participants of the conference will also receive 5 credits hours credential of the Certified Campaign Manager Professional Fundraising Course of International Council of Non-Profit Management, South Korea.</li>
+                                <li>Simply visit www.ncpd.org.np to register. You can visit our office or deposit the registration fee at our bank account. If you need any help kindly reach us at : 9803183411 and 9842026513 and Email us at <span className='font-semibold hover:text-green-200'>info@ncpd.org.np</span></li>
+                                <li>Early Bird Discount: People and organization registering before 15 January will receive a 10% discount in the full registration fee.</li>
+                            </ul></p>
                     </div>
                 );
             case 'FAQ':
                 return (
                     <div className="text-gray-700 mt-2 space-y-4">
-                        <p>Persons working in I/NGOs at an executive level and interested in fundraising and resource mobilization would be assets for effective mutual learning, sharing, and translating it into organizational fundraising work.</p>
+                        <p>The National Fundraising Conference 2019 has something for every type of INGOs, CSOs/NGOs, philanthropists, fundraiser, development experts and mid-career professionals including students perusing social work.</p>
+                        <p>The conference invites around 100 delegates including International Experts, Country Directors, Chief Executives, Directors, Managers, Head of fundraising/business development, and Marketing and Communications Departments and mid-career development professionals including students. </p>
                     </div>
                 );
             case 'Video':
-                return <p className="text-gray-700">Video</p>;
+                return (<div className="p-4">
+                    <h3 className="text-xl sm:text-xl font-semibold text-blue-500 mb-3 truncate" title="Message from Professor Bekay Ahn">
+                        Message from Professor Bekay Ahn
+                    </h3>
+                    <div className="relative w-full h-0 pb-[56.25%] rounded-md overflow-hidden bg-gray-200 flex items-center justify-center">
+                        <iframe
+                            className="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/5BOq94N4pdU"
+                            title="{video.title}"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            loading="lazy"
+                        ></iframe>
+                    </div>
+                </div>);
             case 'Download':
-                return <p className="text-gray-700">Download</p>;
+                return (
+                <PresentationList/>
+                );
             default:
                 return null;
         }
@@ -71,7 +111,7 @@ const National: React.FC = () => {
             {/* Header */}
             <header className="py-6 pt-40">
                 <div className="container mx-auto px-4 md:px-8 lg:px-24">
-                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black">
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center text-black">
                         1st National Philanthropy and Fundraising Conference
                     </h1>
                 </div>
@@ -93,7 +133,10 @@ const National: React.FC = () => {
                 <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                     {/* Event Details */}
                     <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-semibold mb-4 border-b pb-2">Event Details</h3>
+                        <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Events Details
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
                         <div className="space-y-3">
                             <div className="flex flex-col sm:flex-row sm:items-center">
                                 <span className="font-medium w-32 sm:w-24">Start Date:</span>
@@ -128,15 +171,18 @@ const National: React.FC = () => {
 
                     {/* Conference Description */}
                     <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-semibold mb-4 border-b border-green-500 pb-2">Conference Description</h3>
+                        <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Conference Description
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
                         <p className="text-gray-700 leading-relaxed mt-12">
                             One of the main reasons for resource crunch is the shifting of donors' priority from Nepal to other global issues like the refugee, migration, trafficking, combating terrorism, global warming etc. In addition, there is also hope among development partners that the current government will itself tackle the current development given the context of its stability. Consequently, the development cooperation partners are diverting their resources and attention to other countries especially in the conflict affected regions.
-                            </p>
+                        </p>
                     </div>
                 </section>
 
                 {/* Tabs Navigation */}
-                <section className="bg-white rounded-lg shadow-md mb-8">
+                <section className="bg-white rounded-lg shadow-md mb-8 p-2">
                     <div className="flex flex-wrap border-b border-gray-200">
                         {['Background', 'Objective', 'Areas/Topics', 'Schedule', 'Registration', 'FAQ', 'Video', 'Download'].map((tab) => (
                             <button
@@ -160,65 +206,37 @@ const National: React.FC = () => {
 
                 {/* Speakers Section */}
                 <section className="p-6 mb-8">
-                    <h3 className="text-2xl font-bold mb-6 border-b pb-3">Speakers</h3>
-                    <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-6">
-                        <div className="flex-shrink-0">
-                            <img
-                                src="/training/Aliyah Karen.jpg"
-                                alt="Ms. Aliyah Karen"
-                                className="rounded-lg shadow-md w-32 h-32 object-cover"
-                            />
-                        </div>
-                        <div>
-                            <h4 className="text-2xl font-bold text-blue-500">Ms. Aliyah Karen</h4>
-                            <p className="text-blue-500 text-sm mb-2">Fundraising Trainer, and Speaker Malaysia</p>
-                            <p className="text-gray-700 leading-relaxed">
-                                Aliyah Karen is Ph.D from International Royal Academy of United Nations and MBA in Human Resources Management from Nottingham Trent UK. She is heading the Medicare Charitable Foundation from ...
-                            </p>
-                            <button
-                                className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors duration-200"
-                                onClick={() => setShowAliyahBio(true)}
-                                type="button"
-                            >
-                                Full Bio
-                            </button>
-                        </div>
-                    </div>
-                    {showAliyahBio && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-                            <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto bg-transparent flex items-center justify-center">
-                                <button
-                                    className="absolute top-12 right-4 bg-blue-500 text-white rounded-full px-3 py-1 text-xs font-bold hover:bg-blue-900 z-10"
-                                    onClick={() => setShowAliyahBio(false)}
-                                    type="button"
-                                >
-                                    Exit
-                                </button>
-                                <div className="w-full">
-                                    <AliyahProfile />
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                    <h1 className="text-4xl font-bold text-gray-800 mb-8 mt-8 self-start">
+                        Speakers
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                    </h1>
+                    <SpeakerSection />
                 </section>
 
                 {/* Sponsors Section */}
                 <section className="p-6 mb-8">
-                    <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Sponsors</h3>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
+                        Sponsers
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                    </h1>
                     <Sponsor />
                 </section>
 
                 {/* Organizer Section */}
                 <section className="p-6 mb-8 text-md">
-                    <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Organizer</h3>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
+                        Organizer
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                    </h1>
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Nepal Center for Philanthropy and Development (NCPD) is a consulting entity that promotes the culture of philanthropy in Nepal as well as works towards creating high impact, integrity of CSOs. It enhances the talent, trust and treasure of philanthropies and civil society organizations of Nepal for the sustainability of resources and impact. NCPD is a trusted ambassador, partner and member of various global organizations including but not limited to Resource Alliance, UK, Asia Philanthropy Award, Korea, Korean Society of Philanthropy, International Council of Non Profit Management, Alliance for Good, Singapore and participating member of the globally reputed Certified Fund Raising Executive (CFRE).
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                         The conference is an initiative of the Nepal Center for Philanthropy and Development (NCPD) in collaboration with national and international level profit and nonprofit organizations. It is registered in 2018 under Private Company Act of Nepal.
                     </p>
-                    <div>
-                        <p className='text-black font-semibold mt-4'>Advisors</p>
+                    <div className='flex flex-row space-x-8'>
+                        <div>
+                            <p className='text-black font-semibold mt-4'>Advisors</p>
                             <ul className="list-disc pl-6 mt-2 text-black">
                                 <li>Mr. Jagdish Lohani, Executive Director, Youth Vision</li>
                                 <li>Mr. Shobhakar Budhathoki, President at Peace and Justice Center</li>
@@ -233,11 +251,33 @@ const National: React.FC = () => {
                                 <li>Mr. Prakash Pokharel, President BICODEC, Kathmandu</li>
                                 <li>Mr. Milan Mukhia, Former Country Director, Cordaid Nepal</li>
                             </ul>
+                        </div>
+                        <div>
+                            <p className='text-black font-semibold mt-4'>Organizing Committee Members</p>
+                            <ul className="list-disc pl-6 mt-2 text-black">
+                                <li>Mr Rewati Raman Dhakal, Founder and CEO, NCPD</li>
+                                <li>Mr Bishal Rai, Director, NCPD</li>
+                                <li>Mr Narottam Aryal, Head of Quality Assurance  </li>
+                                <li>Mr Nirmal Bhandari, Head of Communication and Networking </li>
+                                <li>Mr Uttam Dhakal, Head of Admin and Finance </li>
+                                <li>Mr Hari Sapkota, Venue and Logistic Coordinator</li>
+                                <li>Ms Oshin Maharjan, Volunteer Coordinator </li>
+                                <Image
+                                    src="/contact/cfre.jpg"
+                                    alt="cfre"
+                                    height={100}
+                                    width={100}
+                                />
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 {/* Venue Section */}
                 <section className="p-6 mb-8 text-md">
-                    <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Venue</h3>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
+                        Venue
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                    </h1>
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal
                     </p>
@@ -245,7 +285,10 @@ const National: React.FC = () => {
                 </section>
                 {/* Contact Section */}
                 <section className="p-6 mb-8 text-md">
-                    <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Contact</h3>
+                    <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
+                        Contact
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                    </h1>
                     <p className="text-black text-xl leading-relaxed mb-4">
                         Mr. Rewati Raman Dhakal
                     </p>

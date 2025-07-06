@@ -110,7 +110,10 @@ const App: React.FC = () => {
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
           {/* Event Details */}
           <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 border-b pb-2">Event Details</h3>
+            <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Events Details
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
             <div className="space-y-3">
               <div className="flex items-center">
                 <span className="font-medium w-24">Start Date:</span>
@@ -145,7 +148,10 @@ const App: React.FC = () => {
 
           {/* Conference Description */}
           <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 border-b pb-2">Conference Description</h3>
+            <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Conference Description
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
             <p className="text-gray-700 leading-relaxed mt-12">
               Certificate Fund Raising Specialist (CFRS) Training of Trainers (ToT) is an intensive and internationally recognized professional fundraising course. It provides you the international as well as tailored knowledge, perspectives, tools and techniques and broadens the scope for a splendid fundraising career in the nonprofit world. It also enables you to raise fund for your organization in a competitive fundraising environment.
             </p>
@@ -176,7 +182,10 @@ const App: React.FC = () => {
 
         {/* Speakers Section */}
         <section className="p-6 mb-8">
-          <h3 className="text-2xl font-bold mb-6 border-b pb-3">Speakers</h3>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Speakers
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
           <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-6">
             <div className="flex-shrink-0">
               <img
@@ -218,7 +227,10 @@ const App: React.FC = () => {
 
         {/* Sponsors Section */}
         <section className="p-6 mb-8">
-          <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Sponsors</h3>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                             Sponsors
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
           <div className="text-gray-500 italic">
             {/* Placeholder for sponsors */}
             No sponsors listed yet.
@@ -227,7 +239,10 @@ const App: React.FC = () => {
 
         {/* Organizer Section */}
         <section className="p-6 mb-8 text-md">
-          <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Organizer</h3>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Organizer
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
           <p className="text-gray-700 leading-relaxed mb-4">
             Nepal Center for Philanthropy and Development (NCPD) is an organization dedicated to promoting the capacity of nonprofit organizations, philanthropies, and private sectors so they could enhance their impact and sustainability. NCPD is also a trusted ambassador and strategic partners of Asia Philanthropy Award, Korean Society of Philanthropy, International Council of Non-Profit Management and participating members of the Certified Fund Raising Executive International.  
           </p>
@@ -237,7 +252,10 @@ const App: React.FC = () => {
         </section>
         {/* Venue Section */}
         <section className="p-6 mb-8 text-md">
-          <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Venue</h3>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Venue
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
           <p className="text-gray-700 leading-relaxed mb-4">
             Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal
           </p>
@@ -245,7 +263,10 @@ const App: React.FC = () => {
         </section>
         {/* Contact Section */}
         <section className="p-6 mb-8 text-md">
-          <h3 className="text-3xl text-black font-bold mb-6 border-b pb-3">Contact</h3>
+          <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                            Contact
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                        </h1>
           <p className="text-black text-xl leading-relaxed mb-4">
            Mr. Rewati Raman Dhakal</p>
           <p className="text-black text-xl leading-relaxed">
