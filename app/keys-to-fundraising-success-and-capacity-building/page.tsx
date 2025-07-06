@@ -1,11 +1,13 @@
 "use client";
 import LogoSection from '@/components/ui/logo';
 import MapSection from '@/components/ui/map';
+import AliyahProfile from '@/components/ui/ms.aliyah';
 import React, { useState } from 'react';
 
 // Main App Component
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('Background');
+  const [showAliyahBio, setShowAliyahBio] = useState(false);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -164,11 +166,29 @@ const App: React.FC = () => {
               <p className="text-gray-700 leading-relaxed">
                 Aliyah Karen is Ph.D from International Royal Academy of United Nations and MBA in Human Resources Management from Nottingham Trent UK.  She is heading the Medicare Charitable Foundation from ...
                 </p>
-              <button className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors duration-200">
+              <button
+                className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors duration-200"
+                onClick={() => setShowAliyahBio(true)}
+              >
                 Full Bio
               </button>
             </div>
           </div>
+          {showAliyahBio && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto bg-transparent flex items-center justify-center">
+                <button
+                  className="absolute top-12 right-4 bg-blue-500 text-white rounded-full px-3 py-1 text-xs font-bold hover:bg-blue-900 z-10"
+                  onClick={() => setShowAliyahBio(false)}
+                >
+                  Exit
+                </button>
+                <div className="w-full">
+                  <AliyahProfile />
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Sponsors Section */}

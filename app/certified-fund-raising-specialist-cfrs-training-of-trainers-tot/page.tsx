@@ -2,10 +2,12 @@
 import LogoSection from '@/components/ui/logo';
 import MapSection from '@/components/ui/map';
 import React, { useState } from 'react';
+import BekayAhnProfile from '@/components/ui/mr.bekay';
 
 // Main App Component
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('Background');
+  const [showBekayBio, setShowBekayBio] = useState(false);
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -192,11 +194,26 @@ const App: React.FC = () => {
               <p className="text-gray-700 leading-relaxed mt-2">
                 He is the Founder & Principal of the Interna...
               </p>
-              <button className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors duration-200">
+              <button className="mt-4 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 transition-colors duration-200" onClick={() => setShowBekayBio(true)}>
                 Full Bio
               </button>
             </div>
           </div>
+          {showBekayBio && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto bg-transparent flex items-center justify-center">
+                <button
+                  className="absolute top-4 right-4 bg-blue-500 text-white rounded-full px-3 py-1 text-xs font-bold hover:bg-blue-900 z-10"
+                  onClick={() => setShowBekayBio(false)}
+                >
+                  Exit
+                </button>
+                <div className="w-full">
+                  <BekayAhnProfile />
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Sponsors Section */}

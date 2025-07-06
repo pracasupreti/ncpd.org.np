@@ -12,32 +12,32 @@ const newsData: NewsItem[] = [
     {
         title: "Workshop on SDG Progress Review",
         date: "23 May 2024",
-        image: "/images/sdg.jpg",
+        image: "/home/Workshop on SDGs progress Review .jpg",
     },
     {
         title: "Philanthropy in Nepal",
         date: "23 May 2024",
-        image: "/images/philanthropy.jpg",
+        image: "/carousel/what-is-philanthropy-bekay-ahn.jpg",
     },
     {
         title: "Fundraising Training for Non Profit Organizations Held in Kathmandu",
         date: "03 Aug 2020",
-        image: "/images/fundraising.jpg",
+        image: "/home/Fundraising.jpeg",
     },
     {
-        title: "Inclusive Education Conference 2024",
-        date: "15 Jun 2024",
-        image: "/images/education.jpg",
+        title: "Certified Fund Raising Specialist (CFRS) Training of Trainers kicked off",
+        date: "03 Aug 2020",
+        image: "/home/Certified.jpeg",
     },
     {
-        title: "Disaster Relief Efforts Expanded",
-        date: "10 Jul 2024",
-        image: "/images/disaster.jpg",
+        title: "Interaction Between Disablities Activists and Korean Philanthropists Held",
+        date: "03 Aug 2020",
+        image: "/home/Interaction Between Disability Activists and Korean Philanthropist Held.jpg",
     },
     {
-        title: "Annual General Meeting Highlights",
-        date: "01 May 2024",
-        image: "/images/agm.jpg",
+        title: "Trend of Nepal Forein Aid Mobilization in different political context",
+        date: "03 Aug 2020",
+        image: "/home/Trend-Nepal-Foreign-Aid-Mobilization.jpeg",
     },
 ];
 
