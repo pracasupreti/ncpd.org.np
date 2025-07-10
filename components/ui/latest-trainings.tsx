@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 
 export default function LatestTrainingPage() {
@@ -8,7 +7,7 @@ export default function LatestTrainingPage() {
       {/* Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <h1 className="text-3xl md:text-4xl font-extrabold text-blue-900 tracking-tight">
-          📚 Latest Trainings
+          Latest Trainings
         </h1>
         <a
           href="/trainings"
@@ -38,7 +37,7 @@ export default function LatestTrainingPage() {
               Certified Fund Raising Specialist (CFRS) – Training of Trainers (ToT)
             </h2>
             <p className="text-gray-600 text-sm sm:text-base">
-              <span className="font-semibold">📅 Date:</span> July 1, 2019
+              <span className="font-semibold"> Date:</span> July 1, 2019
             </p>
             <a
               href="/certified-fund-raising-specialist-cfrs-training-of-trainers-tot"

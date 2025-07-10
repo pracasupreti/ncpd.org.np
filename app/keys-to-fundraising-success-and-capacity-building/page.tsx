@@ -18,8 +18,6 @@ const App: React.FC = () => {
                 </p><p className="text-gray-700 leading-relaxed mt-4">I/NGOs working in Nepal had also learned a critical lesson about the importance of revenue diversification during the global recession in early 2000 and early 2010. Organizations that were dependent on just one or two funding sources had to fight for their survival. The lesson is age-old: Don’t put all of your funding eggs in one basket.
                 </p><p className="text-gray-700 leading-relaxed mt-4">As resources becoming more limited and demand increases, the topics of how to raise and grow funding sources and sustain a program are of utmost importance. Therefore, I/NGOs have to take concrete and deliberate efforts to diversified revenue stream to mitigate the risk of losing any single source of funding. Considering these challenges, Nepal Center for philanthropy and Development(NCPD) has designed a one day training the "Keys to Fundraising Success and Capacity Building" for the executive level human resource or I/NGOs in Nepal.
                 </p><p className="text-gray-700 leading-relaxed mt-4">The participants of the training will able to explore and tab new funding opportunities for the sustainability. It offers international experts with good track records, tailored training content considering the need of I/NGOs in Nepal and  co learning and effective networking environment with experts and leaders from development fraternity.
-
-
                 </p></>
         );
       case 'Objective':
@@ -79,7 +77,7 @@ const App: React.FC = () => {
               className="absolute inset-0 w-full h-full object-center transition-transform duration-500 hover:scale-105"
             />
           </div>
-        </section>
+        </section>  
 
         {/* Event Details and Conference Description */}
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
@@ -154,6 +152,7 @@ const App: React.FC = () => {
             {renderTabContent()}
           </div>
         </section>
+
 
         {/* Speakers Section */}
         <section className="p-6 mb-8">
@@ -238,42 +237,49 @@ const App: React.FC = () => {
         {/* Contact Section */}
         <section className="p-6 mb-8 text-md">
           <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
-                            Contact
-                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
-                        </h1>
-          <p className="text-black text-xl leading-relaxed mb-4">
-           Mr. Rewati Raman Dhakal</p>
-          <p className="text-black text-xl leading-relaxed">
-            Founder and CEO of NCPD</p>
-            <p className='text-gray-700'>9842026513, 9803183411</p>
-            <p><a
-              href="mailto:info@ncpd.org.np"
-              className="text-blue-600 hover:underline"
-            >
-              info@ncpd.org.np
-            </a></p>
-            <p><a
-              href="mailto:rewati@ncpd.org.np"
-              className="text-blue-600 hover:underline"
-            >
-              rewati@ncpd.org.np
-            </a></p>
-            <p className="text-black text-xl leading-relaxed mb-4">
-           Mr. Bishal Rai</p>
-          <p className="text-black text-xl leading-relaxed">
-            Director of NCPD
-</p>
-            <p className='text-gray-700'>9842044215</p>
-            <p><a
-              href="mailto:bishal@ncpd.org.np"
-              className="text-blue-600 hover:underline"
-            >
-              bishal@ncpd.org.np
-            </a></p>
-            <p><a href="https://www.ncpd.org.np" className="text-blue-600 hover:underline">
-              www.ncpd.org.np
-            </a></p>
+            Contact
+            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+          </h1>
+
+          {/* Rewati Raman Dhakal */}
+          <div className="mt-6 space-y-1">
+            <h2 className="text-black text-xl font-semibold leading-relaxed">
+              Mr. Rewati Raman Dhakal
+            </h2>
+            <p className="text-black text-lg">Founder and CEO of NCPD</p>
+            <p className="text-gray-700">9842026513, 9803183411</p>
+            <p>
+              <a href="mailto:info@ncpd.org.np" className="text-blue-600 hover:underline">
+                info@ncpd.org.np
+              </a>
+            </p>
+            <p>
+              <a href="mailto:rewati@ncpd.org.np" className="text-blue-600 hover:underline">
+                rewati@ncpd.org.np
+              </a>
+            </p>
+          </div>
+
+          {/* Bishal Rai */}
+          <div className="mt-10 space-y-1">
+            <h2 className="text-black text-xl font-semibold leading-relaxed">
+              Mr. Bishal Rai
+            </h2>
+            <p className="text-black text-lg">Director of NCPD</p>
+            <p className="text-gray-700">9842044215</p>
+            <p>
+              <a href="mailto:bishal@ncpd.org.np" className="text-blue-600 hover:underline">
+                bishal@ncpd.org.np
+              </a>
+            </p>
+            <p>
+              <a href="https://www.ncpd.org.np" className="text-blue-600 hover:underline">
+                www.ncpd.org.np
+              </a>
+            </p>
+          </div>
         </section>
+
         <LogoSection />
       </main>
     </div>

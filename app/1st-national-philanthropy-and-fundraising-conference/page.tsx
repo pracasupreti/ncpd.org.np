@@ -1,14 +1,12 @@
 "use client";
-import Image from 'next/image';
+import AreaPresentationList from '@/components/ui/areaPresentationList';
 import LogoSection from '@/components/ui/logo';
 import MapSection from '@/components/ui/map';
-import AliyahProfile from '@/components/ui/ms.aliyah';
-import Sponsor from '@/components/ui/sponser';
-import React, { useState } from 'react';
-import { ImRocket } from 'react-icons/im';
-import SpeakerSection from '@/components/ui/speakers';
 import PresentationList from '@/components/ui/presentationList';
-import AreaPresentationList from '@/components/ui/areaPresentationList';
+import SpeakerSection from '@/components/ui/speakers';
+import Sponsor from '@/components/ui/sponser';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
 const National: React.FC = () => {
     const [activeTab, setActiveTab] = useState<string>('Background');
@@ -285,53 +283,50 @@ const National: React.FC = () => {
                 </section>
                 {/* Contact Section */}
                 <section className="p-6 mb-8 text-md">
-                    <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
-                        Contact
-                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
-                    </h1>
-                    <p className="text-black text-xl leading-relaxed mb-4">
-                        Mr. Rewati Raman Dhakal
-                    </p>
-                    <p className="text-black text-xl leading-relaxed">
-                        Founder and CEO of NCPD
-                    </p>
-                    <p className="text-gray-700">9842026513, 9803183411</p>
+                <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
+                    Contact
+                    <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
+                </h1>
+
+                {/* Rewati Raman Dhakal */}
+                <div className="mt-6 space-y-1">
+                    <h2 className="text-black text-xl font-semibold leading-relaxed">
+                    Mr. Rewati Raman Dhakal
+                    </h2>
+                    <p className="text-black text-lg">Founder and CEO of NCPD</p>
+                    <p className="text-gray-700">
+                        9842026513, 9803183411
+                        </p>
                     <p>
-                        <a
-                            href="mailto:info@ncpd.org.np"
-                            className="text-blue-600 hover:underline"
-                        >
-                            info@ncpd.org.np
-                        </a>
+                    <a href="mailto:info@ncpd.org.np" className="text-blue-600 hover:underline">
+                        info@ncpd.org.np
+                    </a>
                     </p>
                     <p>
-                        <a
-                            href="mailto:rewati@ncpd.org.np"
-                            className="text-blue-600 hover:underline"
-                        >
-                            rewati@ncpd.org.np
-                        </a>
+                    <a href="mailto:rewati@ncpd.org.np" className="text-blue-600 hover:underline">
+                        rewati@ncpd.org.np
+                    </a>
                     </p>
-                    <p className="text-black text-xl leading-relaxed mb-4">
-                        Mr. Bishal Rai
-                    </p>
-                    <p className="text-black text-xl leading-relaxed">
-                        Director of NCPD
-                    </p>
+                </div>
+
+                {/* Bishal Rai */}
+                <div className="mt-10 space-y-1">
+                    <h2 className="text-black text-xl font-semibold leading-relaxed">
+                    Mr. Bishal Rai
+                    </h2>
+                    <p className="text-black text-lg">Director of NCPD</p>
                     <p className="text-gray-700">9842044215</p>
                     <p>
-                        <a
-                            href="mailto:bishal@ncpd.org.np"
-                            className="text-blue-600 hover:underline"
-                        >
-                            bishal@ncpd.org.np
-                        </a>
+                    <a href="mailto:bishal@ncpd.org.np" className="text-blue-600 hover:underline">
+                        bishal@ncpd.org.np
+                    </a>
                     </p>
                     <p>
-                        <a href="https://www.ncpd.org.np" className="text-blue-600 hover:underline">
-                            www.ncpd.org.np
-                        </a>
+                    <a href="https://www.ncpd.org.np" className="text-blue-600 hover:underline">
+                        www.ncpd.org.np
+                    </a>
                     </p>
+                </div>
                 </section>
                 <LogoSection />
             </main>

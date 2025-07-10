@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 interface NewsItem {
     title: string;
@@ -51,17 +51,17 @@ export default function LatestNewsPage() {
     const pagedNews = newsData.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
     return (
-        <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-12 px-4 sm:px-6 lg:px-24 font-sans">
+        <section className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 font-sans text-gray-800 p-4 sm:p-6 lg:py-20 lg:px-26">
             {/* Header */}
-            <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-                    📰 Latest News
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+                <h2 className="text-3xl sm:text-4xl font-extrabold text-blue-900 tracking-tight">
+                     Latest News
                 </h2>
-                <a
-                    href="/news"
-                    className="text-sm sm:text-base text-blue-700 font-semibold hover:underline hover:text-blue-900 transition duration-300"
+                <a 
+                   href="/news"
+                   className="text-blue-600 hover:text-white hover:bg-blue-600 border border-blue-600 px-5 py-2 rounded-full transition-all duration-300 text-base font-semibold"
                 >
-                    All News →
+                View All News
                 </a>
             </div>
 
