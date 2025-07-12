@@ -59,7 +59,7 @@ export default function LatestNewsPage() {
       </div>
 
       {/* News Cards */}
-      <div className="overflow-hidden mt-4 max-w-7xl mx-auto py-4">
+      <div className="overflow-hidden mt-8 max-w-7xl mx-auto py-8">
         <div className="flex gap-6 animate-scrollnews pause-scroll w-max">
           {newsData.map((news, index) => (
             <div
@@ -88,13 +88,13 @@ export default function LatestNewsPage() {
       </div>
 
 
-      {/* All Trainings Button */}
+      {/* All news Button */}
       <div className="flex justify-center mt-10">
         <a
-          href="/trainings"
+          href="/news"
           className="bg-primary hover:bg-secondary text-white font-semibold py-2 px-6 rounded-full transition duration-300"
         >
-          All Trainings
+          View All News
         </a>
       </div>
     </section>
