@@ -9,10 +9,7 @@ export default function DialogueForPhilanthropyInfrastructurePage() {
         <div className="container mx-auto">
           <h1 className="text-5xl font-bold text-center mb-4 md:mb-0">Dialogue For Philanthropy Infrastructure</h1>
           <p className="text-base text-black px-20 py-4">
-            <a href="/" className="text-blue-600 hover:underline">
-        Home
-        </a>{""} 
-        <span className="text-red-500"> / Dialogue For Philanthropy Infrastructure</span>
+            Home / <span className="text-red-500"> Dialogue For Philanthropy Infrastructure</span>
           </p>
         </div>
       </header>

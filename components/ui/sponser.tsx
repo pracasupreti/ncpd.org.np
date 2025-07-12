@@ -147,7 +147,6 @@ const Sponsor: React.FC = () => {
           <Image src="/sponsers/JWAS.jpg" alt="NHA" width={100} height={50} />
           <Image src="/sponsers/Project-sarangi.png" alt="Project Sarang" width={100} height={50} />
           <Image src="/sponsers/bikalpaanalternative.jpg" alt="Bikalpa" width={100} height={50} />
-          {/* Add all other bronze sponsors here following the pattern */}
         </SponsorSection>
       </main>
     </div>
