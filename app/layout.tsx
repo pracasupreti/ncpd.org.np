@@ -1,27 +1,23 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Poppins } from 'next/font/google'
+import { Sen } from 'next/font/google'
 import Footer from "@/components/footer";
-const poppins = Poppins({
+
+const sen = Sen({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  variable: '--font-sen',
   display: 'swap',
-})
+});
 
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={poppins.className}>
+    <html lang="en" className={sen.variable}>
       <head>
         <link rel="icon" href="/logo.png" />
         <title>Nepal Center for Philanthropy and Development</title>
       </head>
-      <body>
+      <body className={`${sen.className} font-sans`}>
         <Header />
         {children}
         <Footer />

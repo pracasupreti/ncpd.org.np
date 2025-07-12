@@ -23,12 +23,11 @@ const ContactPage: React.FC = () => {
 
       {/* Main Contact Section */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 py-12">
-        {/* Title section (no card styling) */}
-        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-6">
           Nepal Center for Philanthropy & Development
         </h2>
 
-        <div className="bg-white shadow-md rounded-xl p-6 md:p-8 space-y-5 text-base sm:text-lg">
+        <div className="space-y-5 text-base sm:text-lg">
           {/* Location */}
           <div className="flex items-center gap-3">
             <MapPinIcon className="h-6 w-6 text-blue-600 flex-shrink-0" />
@@ -36,31 +35,41 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* Phone 1 */}
-          <div className="flex items-center gap-3 hover:bg-blue-50 p-2 rounded transition">
-            <PhoneIcon className="h-6 w-6 text-blue-600 flex-shrink-0" />
-            <a href="tel:+9779842026513" className="text-blue-600 hover:underline">
+          <div className="flex items-start gap-3">
+            <PhoneIcon />
+            <a
+              href="tel:+9779842026513"
+              className="text-blue-600 hover:underline"
+            >
               +977 9842026513
             </a>
           </div>
 
           {/* Phone 2 */}
-          <div className="flex items-center gap-3 hover:bg-blue-50 p-2 rounded transition">
-            <PhoneIcon className="h-6 w-6 text-blue-600 flex-shrink-0" />
-            <a href="tel:+9779842044215" className="text-blue-600 hover:underline">
+          <div className="flex items-start gap-3">
+            <PhoneIcon />
+            <a
+              href="tel:+9779842044215"
+              className="text-blue-600 hover:underline"
+            >
               +977 9842044215
             </a>
           </div>
 
           {/* Email */}
-          <div className="flex items-center gap-3 hover:bg-blue-50 p-2 rounded transition">
-            <MailIcon className="h-6 w-6 text-blue-600 flex-shrink-0" />
-            <a href="mailto:info@ncpd.org.np" className="text-blue-600 hover:underline">
+          <div className="flex items-start gap-3">
+            <MailIcon />
+            <a
+              href="mailto:info@ncpd.org.np"
+              className="text-blue-600 hover:underline"
+            >
               info@ncpd.org.np
             </a>
           </div>
         </div>
-      </main>
 
+      </main>
+      
       {/* Partner Logos */}
       <LogoSection />
     </div>

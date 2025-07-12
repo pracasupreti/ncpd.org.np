@@ -10,7 +10,8 @@ const slides = [
   },
   {
     image: "/carousel/ncpd-conference-kathmandu-2019-Inagu.jpeg",
-    title: "1ST NATIONAL PHILANTHROPY AWARD PROVIDED TO MAYOR VAYAS MUNICIPALITY AND BEHALF OF THE ANCIENT PHILANTHROPIST GHASI (GRASSCUTTER).",
+    title:
+      "1ST NATIONAL PHILANTHROPY AWARD PROVIDED TO MAYOR VAYAS MUNICIPALITY AND BEHALF OF THE ANCIENT PHILANTHROPIST GHASI (GRASSCUTTER).",
     button: "Read More",
   },
   {
@@ -64,14 +65,18 @@ const ImageCarousel: React.FC = () => {
             className="brightness-75"
             priority
           />
+          
+          {/* --- START: Added gradient overlay --- */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent [background-position:left_0_center] [background-size:150%_100%] pointer-events-none"></div>
+          {/* --- END: Added gradient overlay --- */}
+
           <div className="absolute top-[70%] left-[40%] transform -translate-x-1/2 -translate-y-1/2 text-primary text-left px-4">
-            <h2 className="text-xl sm:text-xl md:text-2xl font-bold max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-3xl mx-auto">
               {slide.title}
             </h2>
-           <button className="mt-6 px-6 py-2 bg-none rounded-full border-2 border-primary text-white transition hover:bg-primary hover:text-white hover:border-primary cursor-pointer">
-            {slide.button}
-          </button>
-
+            <button className="mt-6 px-6 py-2 bg-none rounded-full border-2 border-primary text-white transition hover:bg-primary hover:text-white hover:border-primary cursor-pointer">
+              {slide.button}
+            </button>
           </div>
         </div>
       ))}

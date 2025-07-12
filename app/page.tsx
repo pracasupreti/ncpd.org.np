@@ -7,13 +7,13 @@ import WhatWeDoPage from "@/components/ui/whatwedo";
 
 export default function Home() {
   return (
-    <div>
-      <ImageCarousel/>
-      <WhatWeDoPage/>
-      <LatestTrainingPage/>
-      <LatestNewsPage/>
-      <LatestConferencePage/>
-      <LogoSection/>
+    <div className="space-y-0"> {/* controls vertical spacing between each section */}
+      <ImageCarousel />
+      <WhatWeDoPage />
+      <LatestTrainingPage />
+      <LatestNewsPage />
+      <LatestConferencePage />
+      <LogoSection />
     </div>
   );
 }

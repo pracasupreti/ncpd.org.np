@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function LatestTrainingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 font-sans text-gray-800 p-4 sm:p-6 lg:py-20 lg:px-26">
+    <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 font-sans text-gray-800 p-4 sm:p-6 lg:px-26">
       {/* Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <h1 className="text-3xl md:text-4xl font-extrabold text-blue-900 tracking-tight">

@@ -1,9 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-sen)', ...fontFamily.sans],
+      },
+    },
   },
   plugins: [],
-}
-
+};
