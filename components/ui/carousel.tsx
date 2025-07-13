@@ -74,7 +74,7 @@ const ImageCarousel: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-3xl mx-auto">
               {slide.title}
             </h2>
-            <button className="mt-6 px-6 py-2 bg-none rounded-full border-2 border-primary text-white transition hover:bg-primary hover:text-white hover:border-primary cursor-pointer">
+            <button className="mt-6 px-6 py-2 bg-[#0ea5e9] rounded-full border-2 border-[#0ea5e9] text-white transition hover:bg-transparent hover:text-[#0ea5e9] cursor-pointer">
               {slide.button}
             </button>
           </div>
@@ -82,14 +82,14 @@ const ImageCarousel: React.FC = () => {
       ))}
 
       {/* Dots */}
-      <div className="absolute bottom-10 left-1/2 flex gap-3 z-20 ">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? "bg-primary w-6 h-2"
+                ? "bg-[#253cb0] w-6 h-2"
                 : "bg-white hover:bg-green-400 w-3 h-2"
             }`}
             aria-label={`Go to slide ${index + 1}`}
