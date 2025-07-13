@@ -74,7 +74,7 @@ const ImageCarousel: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white max-w-3xl mx-auto">
               {slide.title}
             </h2>
-            <button className="mt-6 px-6 py-2 bg-[#0ea5e9] rounded-full border-2 border-[#0ea5e9] text-white transition hover:bg-transparent hover:text-[#0ea5e9] cursor-pointer">
+            <button className="mt-6 px-6 py-2 bg-[#0ea5e9] rounded-full border-2 border-[#0ea5e9] text-white transition hover:bg-[#0b74a3] hover:border-[#0b74a3] hover:text-white cursor-pointer">
               {slide.button}
             </button>
           </div>
