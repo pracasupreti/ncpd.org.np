@@ -1,10 +1,8 @@
 "use client";
 import React from 'react';
-import { Facebook, Twitter, Mail, Linkedin, ArrowUp, Youtube, ArrowUpLeft } from 'lucide-react';
-import { FaWhatsapp, FaFacebookMessenger, FaShare, FaPhone, FaMailchimp, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import { Facebook, Twitter, Mail, Linkedin,  Youtube,  Phone,  Locate } from 'lucide-react';
+import { FaWhatsapp, FaFacebookMessenger, FaArrowRight } from 'react-icons/fa';
 import Link from "next/link"
-import { IoIosArrowForward } from "react-icons/io"
-import { FaLocationArrow } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -14,7 +12,7 @@ export default function Footer() {
       <div className="fixed bottom-5 right-5 z-50 flex flex-col space-y-4">
         {/* WhatsApp */}
         <a
-          href="https://t.me/yourpage"
+          href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Fncpd.org.np%2F&app_id=291494419107518&redirect_uri=https%3A%2F%2Fwww.sharethis.com"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-600 text-white rounded-full p-4 shadow-lg hover:scale-110 transition-transform duration-200"
@@ -47,7 +45,7 @@ export default function Footer() {
               </p>
               <div className="flex space-x-2">
                 <a
-                  href="https://t.me/yourpage"
+                  href="https://www.facebook.com/nepalcenter4philanthropicdevelopment"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full flex items-center justify-center hover:text-secondary"
@@ -71,7 +69,7 @@ export default function Footer() {
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://t.me/yourpage"
+                  href="https://www.youtube.com/channel/UC2cB5Rv3aLhKYdI3zngwtnw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full flex items-center justify-center hover:text-secondary"
@@ -149,24 +147,24 @@ export default function Footer() {
               <div className="md:col-span-1">
                 <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Contact Details</h4>
                 <div className="space-y-2">
-                  <div className="flex items-start space-x-1.5">
-                    <span className="text-black mt-1"><FaLocationArrow /></span>
+                  <div className="flex items-start space-x-1.5 hover:text-secondary">
+                    <Locate className='mt-1'/>
                     <span className="hover:text-secondary text-[16px]">Kathmandu, Nepal</span>
                   </div>
-                  <div className="flex items-center space-x-1.5">
-                    <span className="text-black"><FaPhone/></span>
+                  <div className="flex items-center space-x-1.5 hover:text-secondary">
+                    <Phone/>
                     <a href="tel:+9779842026513" className="hover:text-secondary text-[16px]">
                       +977 9842026513
                     </a>
                   </div>
-                  <div className="flex items-center space-x-1.5">
-                    <span className="text-black"><FaPhone/></span>
+                  <div className="flex items-center space-x-1.5 hover:text-secondary">
+                    <Phone/>
                     <a href="tel:+9779842044215" className="hover:text-secondary text-[16px]">
                       +977 9842044215
                     </a>
                   </div>
-                  <div className="flex items-center space-x-1.5">
-                    <span className="text-black"><Mail/></span>
+                  <div className="flex items-center space-x-1.5 hover:text-secondary">
+                    <Mail/>
                     <a
                       href="mailto:info@ncpd.org.np"
                       className="hover:text-secondary text-[16px]"
