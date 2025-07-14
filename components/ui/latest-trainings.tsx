@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function LatestTrainingPage() {
   return (
-    <div className="bg-white font-sans text-gray-800 p-4 sm:p-6 lg:py-20 lg:px-26">
+    <div className="bg-white font-sans text-gray-800 p-4 sm:p-6 lg:py-12 lg:px-2">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-8">
         <h2 className="text-3xl lg:text-5xl font-extrabold text-black">
           Latest Training
         </h2>
@@ -14,7 +14,7 @@ export default function LatestTrainingPage() {
 
       {/* Training Card */}
       <main className="flex justify-center">
-        <div className="w-full max-w-5xl overflow-hidden flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12 py-6">
+        <div className="w-full max-w-7xl overflow-hidden flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12 px-12 py-6">
           <div className="lg:w-220 relative h-64 lg:h-auto rounded-2xl bg-gray-200 flex items-center justify-center overflow-hidden">
             <Image
               src="/training/latest.jpeg"
@@ -50,7 +50,7 @@ export default function LatestTrainingPage() {
       </main>
 
       {/* All Trainings Button */}
-      <div className="flex justify-center mt-16">
+      <div className="flex justify-center mt-8">
         <a
           href="/trainings"
           className="bg-primary text-white font-semibold py-3 px-8 rounded-full transition duration-300 hover:bg-secondary"
