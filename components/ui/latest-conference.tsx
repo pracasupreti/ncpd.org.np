@@ -33,12 +33,11 @@ export default function LatestConferencePage() {
                 <p className="text-gray-600 text-sm sm:text-base">
                   <span className="font-semibold">Date:</span> July 1, 2019
                 </p>
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                  <ul className="list-disc">
+                  <ul className="list-disc text-gray-700 text-sm sm:text-base leading-relaxed">
                     <li>Philanthropy and NGOs require insights, knowledge, tools, and</li>
                     <li>skills to meet the resources including funding for creating</li>
                     <li>impact and sustaining themselves.</li>
-                  </ul></p>
+                  </ul>
                 <a
                   href="/1st-national-philanthropy-and-fundraising-conference"
                   className="mt-4 inline-block bg-gray-200 text-gray-800 px-8 py-3 rounded-full text-base font-medium tracking-wide hover:bg-gray-300 transition-colors duration-300 w-fit"
