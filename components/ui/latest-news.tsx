@@ -50,16 +50,17 @@ export default function LatestNewsPage() {
   const pagedNews = newsData.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE);
 
   return (
-    <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-12 px-4 sm:px-6 lg:px-4 font-sans">
+    <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-12 px-0 font-sans">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl lg:text-6xl font-extrabold text-black">
-          📰 Latest News
+        <h2 className="text-3xl lg:text-5xl font-extrabold text-black">
+          Latest News
         </h2>
       </div>
 
       {/* News Cards */}
-      <div className="overflow-hidden mt-8 max-w-7xl mx-auto py-8">
+      <div className="overflow-hidden mt-8 py-4">
+        <div className="max-w-7xl mx-auto">
         <div className="flex gap-6 animate-scrollnews pause-scroll w-max">
           {newsData.map((news, index) => (
             <div
@@ -96,6 +97,7 @@ export default function LatestNewsPage() {
         >
           View All News
         </a>
+      </div>
       </div>
     </section>
   );
