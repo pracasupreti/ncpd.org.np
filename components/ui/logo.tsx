@@ -158,6 +158,7 @@ export default function LogoSection() {
   return (
     <section className="py-12 overflow-hidden bg-white">
       <div className="relative w-full group">
+        <div className="max-w-7xl mx-auto">
         <div className="flex w-max whitespace-nowrap animate-scroll pause-scroll">
           {fullLogos.map((logo, index) => (
             <a
@@ -179,6 +180,7 @@ export default function LogoSection() {
               </div>
             </a>
           ))}
+        </div>
         </div>
       </div>
     </section>

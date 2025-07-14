@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function LatestTrainingPage() {
   return (
-    <div className="bg-white font-sans text-gray-800 p-4 sm:p-6 lg:py-12 lg:px-2">
+    <div className="bg-white font-sans text-gray-800 p-2 py-4 lg:py-12 lg:px-2">
       {/* Header */}
       <div className="text-center mb-8">
         <h2 className="text-3xl lg:text-5xl font-extrabold text-black">
@@ -14,7 +14,7 @@ export default function LatestTrainingPage() {
 
       {/* Training Card */}
       <main className="flex justify-center">
-        <div className="w-full max-w-7xl overflow-hidden flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12 px-12 py-6">
+        <div className="w-full max-w-7xl overflow-hidden flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-12 px-2 lg:px-12 py-6">
           <div className="lg:w-220 relative h-64 lg:h-auto rounded-2xl bg-gray-200 flex items-center justify-center overflow-hidden">
             <Image
               src="/training/latest.jpeg"
