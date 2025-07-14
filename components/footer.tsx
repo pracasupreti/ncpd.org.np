@@ -37,9 +37,9 @@ export default function Footer() {
       {/* Footer Section */}
       <footer className="bg-slate-200 text-gray-700 lg:px-2 py-2 md:px-2 px-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* About NCPD */}
-            <div className="md:col-span-1">
+            <div className="md:col-span-1 pr-12">
               <h4 className="text-[2rem] font-bold text-gray-900 mb-4">About NCPD</h4>
               <p className="text-gray-600 leading-relaxed mt-4 mb-3 text-[16px]">
                 NCPD is an organization dedicated in creating enabling environment and opportunities for capacity
@@ -81,8 +81,8 @@ export default function Footer() {
               </div>
 </div>
               {/* Quick Links */}
-              <div className="md:col-span-1 mt-3">
-                <h4>&nbsp;</h4>
+              <div className="md:col-span-1">
+                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Quick Links</h4>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-1.5 hover:text-secondary">
                     <FaArrowRight className="text-[12px] rotate-300" />
@@ -109,8 +109,8 @@ export default function Footer() {
               </div>
 
               {/* Resources */}
-              <div className="md:col-span-1 mt-3 text-[16px]">
-                <h4>&nbsp;</h4>
+              <div className="md:col-span-1">
+                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Helpful Links</h4>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-1.5 hover:text-secondary">
                     <FaArrowRight  className="text-[12px] rotate-300" />
@@ -146,8 +146,8 @@ export default function Footer() {
               </div>
 
               {/* Contact */}
-              <div className="md:col-span-1 mt-3 text-[16px]">
-                <h4>&nbsp;</h4>
+              <div className="md:col-span-1">
+                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Contact Details</h4>
                 <div className="space-y-2">
                   <div className="flex items-start space-x-1.5">
                     <span className="text-black mt-1"><FaLocationArrow /></span>
