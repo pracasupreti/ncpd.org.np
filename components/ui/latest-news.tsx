@@ -60,6 +60,7 @@ export default function LatestNewsPage() {
 
       {/* News Cards */}
       <div className="overflow-hidden mt-8 py-4">
+        <div className="max-w-7xl mx-auto">
         <div className="flex gap-6 animate-scrollnews pause-scroll w-max">
           {newsData.map((news, index) => (
             <div
@@ -96,6 +97,7 @@ export default function LatestNewsPage() {
         >
           View All News
         </a>
+      </div>
       </div>
     </section>
   );
