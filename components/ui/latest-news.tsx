@@ -53,13 +53,13 @@ export default function LatestNewsPage() {
     <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-12 px-4 sm:px-6 lg:px-4 font-sans">
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900">
-          Latest News
+        <h2 className="text-2xl lg:text-6xl font-extrabold text-black">
+          📰 Latest News
         </h2>
       </div>
 
       {/* News Cards */}
-      <div className="overflow-hidden mt-4 max-w-7xl mx-auto py-4">
+      <div className="overflow-hidden mt-8 max-w-7xl mx-auto py-8">
         <div className="flex gap-6 animate-scrollnews pause-scroll w-max">
           {newsData.map((news, index) => (
             <div
@@ -88,13 +88,13 @@ export default function LatestNewsPage() {
       </div>
 
 
-      {/* All Trainings Button */}
+      {/* All news Button */}
       <div className="flex justify-center mt-10">
         <a
-          href="/trainings"
-          className="bg-blue-600 hover:bg-secondary text-white font-semibold py-2 px-6 rounded-full transition duration-300"
+          href="/news"
+          className="bg-primary hover:bg-secondary text-white font-semibold py-2 px-6 rounded-full transition duration-300"
         >
-          All News
+          View All News
         </a>
       </div>
     </section>

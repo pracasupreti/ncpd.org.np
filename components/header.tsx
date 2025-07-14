@@ -130,7 +130,7 @@ export default function Header() {
                       <>
                         <button className="relative font-semibold group text-black">
                           {item.name}
-                          <svg className="ml-1 w-3 h-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="ml-1 w-3 h-3 inline-block transform transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                           </svg>
                           <span className="absolute left-0 bottom-[-2px] h-0.5 bg-green-500 w-0 group-hover:w-full transition-all duration-300"></span>
@@ -140,7 +140,7 @@ export default function Header() {
                             <li key={subItem.name}>
                               <a
                                 href={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-200 hover:translate-x-2"
                               >
                                 {subItem.name}
                               </a>
@@ -196,7 +196,7 @@ export default function Header() {
                           <li key={subItem.name}>
                             <a
                               href={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200 transition"
+                              className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200 transition-all duration-200 hover:translate-x-2"
                             >
                               {subItem.name}
                             </a>

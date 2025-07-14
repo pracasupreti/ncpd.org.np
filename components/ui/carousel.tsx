@@ -5,28 +5,28 @@ import React, { useEffect, useState } from "react";
 const slides = [
   {
     image: "/carousel/ncpd-conference-2019-session.jpg",
-    title: "1ST NATIONAL PHILANTHROPY AND FUNDRAISING CONFERENCE",
+    title: "1st National Philanthropy And Fundraising Conference",
     button: "Read More",
   },
   {
     image: "/carousel/ncpd-conference-kathmandu-2019-Inagu.jpeg",
     title:
-      "1ST NATIONAL PHILANTHROPY AWARD PROVIDED TO MAYOR VAYAS MUNICIPALITY AND BEHALF OF THE ANCIENT PHILANTHROPIST GHASI (GRASSCUTTER).",
+      "1st National Philanthropy Award Provided To Mayor Vayas Municipality And Behalf Of The Ancient Philanthropist Ghasi Grasscutter",
     button: "Read More",
   },
   {
     image: "/carousel/what-is-philanthropy-bekay-ahn.jpg",
-    title: "PROF. BEKAY AHN PRESENTING ON THE GLOBAL PHILANTHROPY TRENDS AND PRACTICES.",
+    title: "Prof. Bekay Ahn Presenting On The Global Philanthropy Trends And Practices",
     button: "Read More",
   },
   {
     image: "/carousel/Networking-Among-Philanthropy-Actors-Nepal.jpg",
-    title: "OFFERING NETWORKING OPPORTUNITIES FOR PHILANTHROPY ACTORS.",
+    title: "Offering Networking Opportunities For Philanthropy Actors",
     button: "Read More",
   },
   {
     image: "/carousel/ncpd-certified-campaign-manager-certification-distribution-program.jpeg",
-    title: "CERTIFIED FUND RAISING SPECIALIST (CFRS).",
+    title: "Certified Fund Raising Specialist (CFRS)",
     button: "Read More",
   },
 ];
