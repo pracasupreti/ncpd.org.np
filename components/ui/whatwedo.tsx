@@ -60,7 +60,7 @@ const WhatWeDoPage: React.FC = () => {
 
             <a
               href={item.link}
-              className="inline-block text-blue-600 font-semibold hover:text-green-800 text-sm sm:text-base transition-all duration-300"
+              className="inline-block text-green-600 font-semibold hover:text-green-800 text-sm sm:text-base transition-all duration-300"
             >
               Read more →
             </a>
