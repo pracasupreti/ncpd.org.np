@@ -3,7 +3,7 @@
 :root {
   --background: #171717;
   --foreground: #ffffff;
-  --primary: #5d5af0;
+  --primary: #0ea5e9;
   --secondary: #0011ff;
 }
 
@@ -59,7 +59,7 @@ html {
 }
 
 .animate-scrollnews {
-  animation: scroll 10s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 

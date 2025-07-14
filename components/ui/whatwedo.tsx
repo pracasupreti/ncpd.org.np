@@ -28,7 +28,8 @@ const WhatWeDoPage: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-gradient-to-br from-white via-blue-50 to-white py-16 px-4 sm:px-6 lg:px-20">
+    <section className="w-full bg-gradient-to-br from-blue-50 via-blue-100 to-blue-50 py-16 px-4 sm:px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto">
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
         What We Do?
       </h1>
@@ -37,9 +38,9 @@ const WhatWeDoPage: React.FC = () => {
         {features.map((item, index) => (
           <div
             key={index}
-            className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 flex flex-col justify-between"
+            className="group bg-white rounded-3xl p-6 flex flex-col justify-between"
           >
-            <div className="flex items-start gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-4">
               <div className="bg-green-100 p-3 rounded-full">
                 <Image
                   src={item.image}
@@ -60,12 +61,13 @@ const WhatWeDoPage: React.FC = () => {
 
             <a
               href={item.link}
-              className="inline-block text-blue-600 font-semibold hover:text-green-800 text-sm sm:text-base transition-all duration-300"
+              className="inline-block text-primary font-semibold hover:text-secondary text-sm sm:text-base transition-all duration-300"
             >
               Read more →
             </a>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

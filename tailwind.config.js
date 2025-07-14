@@ -10,10 +10,6 @@ module.exports = {
       fontFamily: {
         tiktok: ['"TikTok Sans"', "sans-serif"],
       },
-      colors: {
-        primary: "#0EA5E9",   // Tailwind's sky-500 color
-        secondary: "#f97316", // Tailwind's orange-500 color (you can adjust)
-      },
     },
   },
   plugins: [],
