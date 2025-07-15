@@ -128,19 +128,22 @@ export default function Header() {
                   <li key={item.name} className="relative group">
                     {item.dropdown ? (
                       <>
-                        <button className="relative font-semibold group text-black">
+                        <button className="relative font-semibold group text-black hover:text-blue-600 transition-colors duration-300">
                           {item.name}
                           <svg className="ml-1 w-3 h-3 inline-block transform transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                           </svg>
-                          <span className="absolute left-0 bottom-[-2px] h-0.5 bg-green-500 w-0 group-hover:w-full transition-all duration-300"></span>
                         </button>
-                        <ul className="absolute left-0 top-full w-56 bg-white border-t-4 border-green-500 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-30">
-                          {item.dropdown.map((subItem) => (
-                            <li key={subItem.name}>
+                        <ul className="absolute left-0 top-full w-56 bg-white shadow-lg rounded-md overflow-hidden opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-30">
+                          {item.dropdown.map((subItem, index) => (
+                            <li
+                              key={subItem.name}
+                              className="relative"
+                            >
                               <a
                                 href={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-200 hover:translate-x-2"
+                                className="block px-4 py-3 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-100 w-full 
+                                first:rounded-t-md last:rounded-b-md"
                               >
                                 {subItem.name}
                               </a>
@@ -149,9 +152,8 @@ export default function Header() {
                         </ul>
                       </>
                     ) : (
-                      <a href={item.href} className="relative font-semibold group text-black">
+                      <a href={item.href} className="relative font-semibold group text-black hover:text-blue-600 transition-colors duration-300">
                         {item.name}
-                        <span className="absolute left-0 bottom-[-2px] h-0.5 bg-green-500 w-0 group-hover:w-full transition-all duration-300"></span>
                       </a>
                     )}
                   </li>
@@ -191,13 +193,15 @@ export default function Header() {
                       </svg>
                     </button>
                     {activeMobileDropdown === item.name && (
-                      <ul className="border-t-4 border-green-500 rounded-md bg-gray-50 mt-1">
+                      <ul className="bg-gray-50 mt-1">
                         {item.dropdown.map((subItem) => (
-                          <li key={subItem.name}>
+                          <li key={subItem.name} className="relative overflow-hidden">
                             <a
                               href={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200 transition-all duration-200 hover:translate-x-2"
+                              className="group relative block px-4 py-3 text-sm text-gray-800 hover:text-blue-600 transition-all duration-300 hover:translate-x-2"
                             >
+                              {/* Horizontal line that extends from left on hover - mobile version */}
+                              <span className="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-blue-500 w-3 scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></span>
                               {subItem.name}
                             </a>
                           </li>
