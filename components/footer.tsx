@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Facebook, Twitter, Mail, Linkedin,  Youtube,  Phone,  Locate } from 'lucide-react';
+import { Facebook, Twitter, Mail, Linkedin, Youtube, Phone, LocationEdit } from 'lucide-react';
 import { FaWhatsapp, FaFacebookMessenger, FaArrowRight } from 'react-icons/fa';
 import Link from "next/link"
 
@@ -77,113 +77,122 @@ export default function Footer() {
                   <Youtube className="w-6 h-6" />
                 </a>
               </div>
-</div>
-              {/* Quick Links */}
-              <div className="md:col-span-1">
-                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Quick Links</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight className="text-[12px] rotate-300" />
-                    <Link href="/about" className="text-[16px]">
-                      About NCPD
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link
-                      href="/core-values"
-                      className="text-[16px]"
-                    >
-                      Core Values of NCPD
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/team" className="text-[16px]">
-                      Our Team
-                    </Link>
-                  </div>
+            </div>
+            {/* Quick Links */}
+            <div className="md:col-span-1">
+              <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Quick Links</h4>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                  <Link href="/about" className="text-[16px] relative group">
+                    About NCPD
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+
+                <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                  <Link
+                    href="/core-values"
+                    className="text-[16px] relative group"
+                  >
+                    Core Values of NCPD
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/team" className="text-[16px] relative group">
+                    Our Team
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              {/* Resources */}
-              <div className="md:col-span-1">
-                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Helpful Links</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/trainings" className="text-[16px]">
-                      Trainings
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/conferences" className="text-[16px]">
-                      Conferences
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/news" className="text-[16px]">
-                      News
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/gallery" className="text-[16px]">
-                      Gallery
-                    </Link>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <FaArrowRight  className="text-[12px] rotate-300" />
-                    <Link href="/videos" className="text-[16px]">
-                      Videos
-                    </Link>
-                  </div>
+            {/* Resources */}
+            <div className="md:col-span-1">
+              <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Helpful Links</h4>
+              <div className="space-y-2">
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/trainings" className="text-[16px] relative group">
+                    Trainings
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/conferences" className="text-[16px] relative group">
+                    Conferences
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/news" className="text-[16px] relative group">
+                    News
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/gallery" className="text-[16px] relative group">
+                    Gallery
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/videos" className="text-[16px] relative group">
+                    Videos
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
                 </div>
               </div>
+            </div>
 
-              {/* Contact */}
-              <div className="md:col-span-1">
-                <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Contact Details</h4>
-                <div className="space-y-2">
-                  <div className="flex items-start space-x-1.5 hover:text-secondary">
-                    <Locate className='mt-1'/>
-                    <span className="hover:text-secondary text-[16px]">Kathmandu, Nepal</span>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <Phone/>
-                    <a href="tel:+9779842026513" className="hover:text-secondary text-[16px]">
-                      +977 9842026513
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <Phone/>
-                    <a href="tel:+9779842044215" className="hover:text-secondary text-[16px]">
-                      +977 9842044215
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-1.5 hover:text-secondary">
-                    <Mail/>
-                    <a
-                      href="mailto:info@ncpd.org.np"
-                      className="hover:text-secondary text-[16px]"
-                    >
-                      info@ncpd.org.np
-                    </a>
-                  </div>
+            {/* Contact */}
+            <div className="md:col-span-1">
+              <h4 className='text-[2rem] font-bold text-gray-900 mb-4'>Contact Details</h4>
+              <div className="space-y-2">
+                <div className="flex items-start space-x-1.5 hover:text-secondary">
+                  <LocationEdit className='mt-1' />
+                  <span className="hover:text-secondary text-[16px]">Kathmandu, Nepal</span>
+                </div>
+                <div className="flex items-center space-x-1.5 hover:text-secondary">
+                  <Phone />
+                  <a href="tel:+9779842026513" className="hover:text-secondary text-[16px]">
+                    +977 9842026513
+                  </a>
+                </div>
+                <div className="flex items-center space-x-1.5 hover:text-secondary">
+                  <Phone />
+                  <a href="tel:+9779842044215" className="hover:text-secondary text-[16px]">
+                    +977 9842044215
+                  </a>
+                </div>
+                <div className="flex items-center space-x-1.5 hover:text-secondary">
+                  <Mail />
+                  <a
+                    href="mailto:info@ncpd.org.np"
+                    className="hover:text-secondary text-[16px]"
+                  >
+                    info@ncpd.org.np
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Bottom Footer */}
-          <div className="bg-slate-200 text-black text-center my-2">
-            <p className="text-[16px]">
-              © 2025 <span>Nepal Center for Philanthropy & Development</span> || All Rights
-              Reserved.
-            </p>
-          </div>
+        {/* Bottom Footer */}
+        <div className="bg-slate-200 text-black text-center my-2">
+          <p className="text-[16px]">
+            © 2025 <span>Nepal Center for Philanthropy & Development</span> || All Rights
+            Reserved.
+          </p>
+        </div>
       </footer>
 
 
