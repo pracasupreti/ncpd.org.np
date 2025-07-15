@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const WhatWeDoPage: React.FC = () => {
   const features = [
@@ -61,9 +62,11 @@ const WhatWeDoPage: React.FC = () => {
 
             <a
               href={item.link}
-              className="inline-block text-primary font-semibold hover:text-secondary text-sm sm:text-base transition-all duration-300"
+              className="inline-block text-primary font-semibold text-sm sm:text-base"
             >
-              Read more →
+              <div className="flex">
+              Read more <ArrowRight className="ml-2 h-6 w-6 bg-primary text-white rounded-full p-1 -rotate-60 transform transition-transform duration-300 group-hover:rotate-0" />
+              </div>
             </a>
           </div>
         ))}
