@@ -47,8 +47,9 @@ export default function LatestTrainingPage() {
             <div className="flex items-center gap-8 mb-4">
               <div className="flex items-center gap-2">
                 <Image src="/home/chair.png"
-                  height={60}
-                  width={60} alt={""} />
+                  height={50}
+                  width={50} alt={""} 
+                  className="rounded-2xl border-2 border-primary p-2" />
                 <div>
                   <span className="text-3xl text-primary font-bold ">20</span>
                   <p className="text-gray-500 text-base">Seats</p>
@@ -56,8 +57,9 @@ export default function LatestTrainingPage() {
               </div>
               <div className="flex items-center gap-2 ml-8">
                 <Image src="/home/receipt.png"
-                  height={60}
-                  width={60} alt={""} />
+                  height={50}
+                  width={50} alt={""} 
+                  className="rounded-2xl border-2 border-primary p-2" />
                 <div>
                   <span className="text-3xl text-primary font-bold ">NRS 14500/-</span>
                   <p className="text-gray-500 text-base">Fees</p>

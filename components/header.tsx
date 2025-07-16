@@ -20,14 +20,7 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    {
-      name: "About",
-      dropdown: [
-        { name: "About NCPD", href: "/about" },
-        { name: "Core values of NCPD", href: "/core-values" },
-        { name: "Our Team", href: "/team" },
-      ],
-    },
+    { name: "About", href: "/about" },
     {
       name: "Services",
       dropdown: [
