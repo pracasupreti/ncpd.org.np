@@ -94,7 +94,7 @@ const AboutPage = () => {
           About NCPD
         </motion.h1>
         <nav className="text-sm text-gray-600 mt-2">
-          <a href="/" className="text-blue-700 hover:text-blue-900">Home</a> / <span className="text-red-600">About</span>
+          <a href="/" className="text-blue-700 hover:text-blue-900">Home</a> / <span className="text-blue-600">About</span>
         </nav>
       </header>
 
@@ -167,7 +167,7 @@ const AboutPage = () => {
 
         {/* Objectives */}
         <motion.section className="bg-white shadow-md rounded-2xl p-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={6}>
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Objectives</h2>
+          <h2 className="text-3xl text-center font-semibold text-blue-800 mb-4">Objectives</h2>
           <ul className="list-disc list-inside space-y-3 text-gray-700">
             {["Conduct and organize research, training, conferences, seminars, and workshops related to philanthropy, fundraising, communication, and branding.",
               "Conduct dialogue for enabling environments where philanthropy can thrive.",
@@ -184,7 +184,7 @@ const AboutPage = () => {
 
         {/* Core Values */}
         <motion.section className="bg-white shadow-md rounded-2xl p-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={7}>
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Core Values</h2>
+          <h2 className="text-3xl text-center font-semibold text-blue-800 mb-4">Core Values</h2>
           <ul className="list-disc list-inside space-y-4 text-gray-700">
             {["Integrity: We are committed to honesty and sincere adherence to the highest professional, moral, and ethical standards.",
               "Impact: We believe that philanthropic efforts should support and enhance meaningful work that serves the public good in ways that, whenever possible, are measurable and sustainable.",
@@ -192,7 +192,7 @@ const AboutPage = () => {
               "Transparency and Accountability: We hold ourselves to the highest standards of organizational integrity and responsible stewardship, which require open, broad, and thorough disclosure of decisions, processes, and procedures.",
               "Collaboration and Partnership: We embrace sharing knowledge and taking collective action to strengthen all parties and effectively leverage resources to achieve common objectives."
             ].map((val, idx) => (
-              <li key={idx} className="hover:text-blue-600 transition"><strong>{val.split(":")[0]}:</strong>{val.slice(val.indexOf(":"))}</li>
+              <li key={idx} className="hover:text-blue-600 transition"><strong>{val.split(":")[0]}</strong>{val.slice(val.indexOf(":"))}</li>
             ))}
           </ul>
         </motion.section>

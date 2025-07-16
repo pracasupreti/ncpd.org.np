@@ -1,92 +1,122 @@
-// page.tsx
-import React from 'react';
-import Image from 'next/image';
-import LogoSection from '@/components/ui/logo';
+"use client";
+import React from "react";
+import Image from "next/image";
+import LogoSection from "@/components/ui/logo";
+import { MdCheckCircle } from "react-icons/md";
 
-// Define a type for the training data for better type safety
 interface Training {
   id: string;
   imageSrc: string;
   title: string;
   date: string;
   venue: string;
+  seats: number;
+  fee: string;
   description?: string[];
 }
 
 const trainings: Training[] = [
   {
-    id: '/certified-fund-raising-specialist-cfrs-training-of-trainers-tot',
-    imageSrc: '/training/latest.jpeg',
-    title: 'Certified Fund Raising Specialist (CFRS) Training of Trainers (ToT)',
-    date: 'July 1, 2019',
-    venue: 'Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal',
+    id: "/certified-fund-raising-specialist-cfrs-training-of-trainers-tot",
+    imageSrc: "/training/latest.jpeg",
+    title: "Certified Fund Raising Specialist (CFRS) Training of Trainers (ToT)",
+    date: "July 1, 2019",
+    venue: "Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal",
+    seats: 20,
+    fee: "NRS 14500/-",
   },
   {
-    id: '/keys-to-fundraising-success-and-capacity-building',
-    imageSrc: '/training/key to fundraising.png',
-    title: 'Keys to Fundraising Success and Capacity Building',
-    date: 'June 10, 2019',
-    venue: 'Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal',
+    id: "/keys-to-fundraising-success-and-capacity-building",
+    imageSrc: "/training/key-to-fundraising.png",
+    title: "Keys to Fundraising Success and Capacity Building",
+    date: "June 10, 2019",
+    venue: "Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal",
+    seats: 25,
+    fee: "NRS 12000/-",
     description: [
-      'Donor management - how do you retain existing donors and identify new ones?',
-      'Story telling. How do you showcase your INGO/ NGO?',
-      'Small and Big Fundraising ideas.',
-      'Using PR and Social Media to Brand your INGO / NGO. How donors react and what do they want?',
+      "Donor management - how do you retain existing donors and identify new ones?",
+      "Story telling. How do you showcase your INGO/ NGO?",
+      "Small and Big Fundraising ideas.",
+      "Using PR and Social Media to Brand your INGO / NGO. How donors react and what do they want?",
     ],
   },
 ];
 
 const TrainingsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 font-sans text-gray-800 py-24">
-      {/* Header Section */}
-      <header className="py-8 mt-8 mb-8">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-extrabold text-center text-blue-800 tracking-tight">
-            Trainings
-          </h1>
-        </div>
-      </header>
+    <div className="bg-white font-sans text-gray-800 pt-40 pb-24 px-4">
+      {/* Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-black">Trainings</h2>
+      </div>
 
-      {/* Main Content Area - Training List */}
-      <main className="flex flex-col items-center gap-8">
+      {/* Training List */}
+      <main className="flex flex-col items-center mt-10 space-y-28">
         {trainings.map((training) => (
           <div
             key={training.id}
-            className="w-full max-w-5xl transition-all duration-300 overflow-hidden flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rounded-3xl bg-white shadow"
+            className="w-full max-w-7xl flex flex-col lg:flex-row gap-10"
           >
-            {/* Image */}
-            <div className="lg:w-1/2 relative h-64 lg:h-auto overflow-hidden group">
+            {/* Stretched Image */}
+            <div className="lg:w-[50%] h-64 lg:h-[400px] rounded-2xl overflow-hidden bg-gray-200 relative">
               <Image
                 src={training.imageSrc}
                 alt={training.title}
                 fill
-                className="rounded-3xl lg:rounded-3xl transition-transform duration-300 group-hover:scale-110"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-fill rounded-2xl"
               />
             </div>
 
-            {/* Details */}
-            <div className="lg:w-1/2 p-6 sm:p-8 flex flex-col justify-center gap-4">
-              <h2 className="text-2xl sm:text-3xl font-bold text-blue-800 leading-snug hover:text-blue-400">
+            {/* Right Content */}
+            <div className="lg:w-[50%] flex flex-col justify-start gap-4">
+              <h1 className="text-3xl font-extrabold text-blue-800 mb-2">
                 {training.title}
-              </h2>
+              </h1>
+
+              <p className="text-gray-600 text-sm sm:text-base">
+                <span className="font-semibold">Date:</span> {training.date}
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base">
+                <span className="font-semibold">Venue:</span> {training.venue}
+              </p>
+
+              {/* Seats & Fees */}
+              <div className="flex items-center gap-8 mb-4">
+                <div className="flex items-center gap-2">
+                  <Image src="/home/chair.png" height={60} width={60} alt="Seats" />
+                  <div>
+                    <span className="text-3xl text-primary font-bold">{training.seats}</span>
+                    <p className="text-gray-500 text-base">Seats</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 ml-8">
+                  <Image src="/home/receipt.png" height={60} width={60} alt="Fees" />
+                  <div>
+                    <span className="text-3xl text-primary font-bold">{training.fee}</span>
+                    <p className="text-gray-500 text-base">Fees</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description */}
               {training.description && (
-                <ul className="list-disc text-gray-700 text-sm sm:text-sm">
+                <ul className="space-y-4 text-sm mb-4">
                   {training.description.map((desc, idx) => (
-                    <li key={idx}>{desc}</li>
+                    <li key={idx} className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                          <MdCheckCircle size={20} />
+                        </div>
+                      </div>
+                      <p className="text-gray-700 font-medium">{desc}</p>
+                    </li>
                   ))}
                 </ul>
               )}
-              <p className="text-blue-600 text-sm sm:text-base">
-                <span className="font-semibold">📅 Date:</span> {training.date}
-              </p>
-              <p className="text-blue-600 text-sm sm:text-base">
-                <span className="font-semibold">📍 Venue:</span> {training.venue}
-              </p>
+
               <a
-                href={`${training.id}`}
-                className="mt-2 inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm sm:text-base font-semibold tracking-wide hover:bg-blue-900 transition-colors duration-300 w-fit"
+                href={training.id}
+                className="inline-block px-8 py-3 rounded-xl text-base font-medium text-white bg-primary w-fit  hover:bg-[#0d83b8]"
               >
                 View Details
               </a>
@@ -94,8 +124,11 @@ const TrainingsPage: React.FC = () => {
           </div>
         ))}
       </main>
-      {/* Logo Section */}
-      <LogoSection/>
+
+      {/* Footer Logo */}
+      <div className="mt-28">
+        <LogoSection />
+      </div>
     </div>
   );
 };
