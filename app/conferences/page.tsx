@@ -5,13 +5,18 @@ import { MdCheckCircle } from "react-icons/md";
 
 export default function ConferencesPage() {
   return (
-    <div className="bg-white font-sans text-gray-800 p-4 lg:py-12 lg:px-2">
+    <div className="bg-white font-sans text-gray-800 px-4 pt-36 pb-24">
       {/* Header Section */}
-      <header className="text-center mb-8">
-        <h1 className="text-3xl lg:text-5xl font-extrabold text-blue-800 mt-24">
+      <header className="text-center mb-3">
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-black">
           Conferences
         </h1>
       </header>
+
+      {/* Breadcrumb */}
+      <div className="text-center mb-12">
+        <p className="text-blue-600 text-sm font-medium">Home / Conferences</p>
+      </div>
 
       {/* Conference Card */}
       <main className="flex justify-center">
@@ -28,7 +33,7 @@ export default function ConferencesPage() {
 
           {/* Details */}
           <div className="lg:w-[50%] flex flex-col justify-start gap-4">
-            <h2 className="text-3xl font-extrabold text-blue-800 mb-2">
+            <h2 className="text-3xl font-extrabold text-blue-800 mb-2 leading-tight">
               <span className="text-6xl font-extrabold text-blue-800">1</span>
               st National Philanthropy and Fundraising Conference
             </h2>
@@ -58,27 +63,21 @@ export default function ConferencesPage() {
 
             {/* List */}
             <ul className="space-y-4 text-sm mb-4">
-              <li className="flex items-start gap-4 group">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 group-hover:bg-blue-200 transition">
-                    <MdCheckCircle size={20} />
+              {[
+                "Philanthropy and NGOs require insights, knowledge, tools, and skills to meet the resources including funding for creating impact and sustaining themselves.",
+                "To introduce and aware on the existing opportunities of funding/resources for their CSOs.",
+              ].map((point, idx) => (
+                <li key={idx} className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0">
+                    <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 group-hover:bg-blue-200 transition">
+                      <MdCheckCircle size={20} />
+                    </div>
                   </div>
-                </div>
-                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition">
-                  Philanthropy and NGOs require insights, knowledge, tools, and skills to meet the resources including funding for creating impact and sustaining themselves.
-                </p>
-              </li>
-
-              <li className="flex items-start gap-4 group">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-500 group-hover:bg-blue-200 transition">
-                    <MdCheckCircle size={20} />
-                  </div>
-                </div>
-                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition">
-                  To introduce and aware on the existing opportunities of funding/resources for their CSOs.
-                </p>
-              </li>
+                  <p className="text-gray-700 group-hover:text-gray-900 font-medium transition">
+                    {point}
+                  </p>
+                </li>
+              ))}
             </ul>
 
             <a

@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
         {/* Right Section – Newsletter */}
         <div className="w-full lg:w-1/2 flex flex-col justify-start">
           <h2 className="text-3xl md:text-4xl font-semibold leading-snug mb-6">
-            Subscribe to<br />our newsletter
+            Subscribe to<br />our organization
           </h2>
 
           <div className="flex items-center w-full max-w-lg">
@@ -91,12 +91,7 @@ const ContactPage: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-            <button
-              type="submit"
-              className="ml-2 px-4 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 flex-shrink-0"
-            >
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            
           </div>
         </div>
       </div>
