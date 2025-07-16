@@ -52,9 +52,9 @@ const VideoGalleryPage: React.FC = () => {
       <header className="px-4 sm:px-8 lg:px-20 pb-10">
         <div className="text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-black mb-2">
-            Video Gallery
+            Videos
           </h1>
-          <nav className="text-sm text-blue-600">
+          <nav className="text-sm text-blue-600 font-bold">
             <a href="/" className="hover:underline">Home</a>
             <span className="mx-1">/</span>
             <span className="text-blue-600">Video</span>

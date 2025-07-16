@@ -46,8 +46,10 @@ const GalleryPage: React.FC = () => {
       </div>
 
       {/* Breadcrumb */}
-      <div className="text-center mb-12">
-        <p className="text-blue-600 text-sm font-medium">Home / Gallery</p>
+      <div className="text-center mb-12 text-sm font-medium text-blue-600">
+        <a href="/" className="hover:text-blue-800 transition-colors">Home</a>
+        <span className="mx-1">/</span>
+        <span>Gallery</span>
       </div>
 
       {/* Gallery Grid */}

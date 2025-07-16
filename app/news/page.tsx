@@ -16,14 +16,14 @@ const newsItems: NewsItem[] = [
   {
     id: "1",
     title: "Workshop on SDG Progress Review",
-    imageSrc: "/news/sdg-workshop.jpg",
+    imageSrc: "/news/sdg-workshop.png",
     date: "23 May 2024",
     href: "#",
   },
   {
     id: "2",
     title: "Philanthropy in Nepal",
-    imageSrc: "/news/philanthropy.jpg",
+    imageSrc: "/news/nonprofit.jpg",
     date: "23 May 2024",
     href: "#",
   },
@@ -72,7 +72,7 @@ const newsItems: NewsItem[] = [
   {
     id: "9",
     title: "1st National Philanthropy and Fundraising Conference in Nepal",
-    imageSrc: "/news/conference-first.jpg",
+    imageSrc: "/news/conference-first.png",
     date: "03 May 2019",
     href: "#",
   },
@@ -87,8 +87,10 @@ const NewsPage: React.FC = () => {
       </div>
 
       {/* Breadcrumb */}
-      <div className="text-center mb-12">
-        <p className="text-blue-600 text-sm font-medium">Home / News</p>
+      <div className="text-center mb-12 text-sm font-medium text-blue-600">
+        <a href="/" className="hover:underline">Home</a>
+        <span className="mx-1">/</span>
+        <span>News</span>
       </div>
 
       {/* News Grid */}
