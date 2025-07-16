@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { MdCheckCircle } from "react-icons/md";
+import { HugeiconsIcon, PaymentSuccess01Icon, SeatSelectorIcon } from 'hugeicons-react';
+
 
 export default function LatestConferencePage() {
   return (
@@ -36,7 +38,7 @@ export default function LatestConferencePage() {
             <p className="text-gray-600 text-sm sm:text-base">
               <span className="font-semibold">Date:</span> July 1, 2019
             </p>
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-3">
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed line-clamp-2">
               One of the main reasons for resource crunch is the shifting of donors'
               priority from Nepal to other global issues like the refugee, migration,
               trafficking, combating terrorism, global warming etc. In addition, there
@@ -47,8 +49,9 @@ export default function LatestConferencePage() {
             <div className="flex items-center gap-8 mb-4">
               <div className="flex items-center gap-2">
                 <Image src="/home/chair.png"
-                  height={60}
-                  width={60} alt={""} />
+                                  height={50}
+                                  width={50} alt={""} 
+                                  className="rounded-2xl border-2 border-primary p-2" />
                 <div>
                   <span className="text-3xl text-primary font-bold ">40</span>
                   <p className="text-gray-500 text-base">Seats</p>
@@ -56,10 +59,11 @@ export default function LatestConferencePage() {
               </div>
               <div className="flex items-center gap-2 ml-8">
                 <Image src="/home/receipt.png"
-                  height={60}
-                  width={60} alt={""} />
+                                  height={50}
+                                  width={50} alt={""} 
+                                  className="rounded-2xl border-2 border-primary p-2" />
                 <div>
-                  <span className="text-3xl text-primary font-bold ">INGOs 17,000/-</span>
+                  <span className="text-3xl text-primary font-bold ">NRS 17,000/-</span>
                   <p className="text-gray-500 text-base">Fees</p>
                 </div>
               </div>
@@ -72,7 +76,7 @@ export default function LatestConferencePage() {
                     <MdCheckCircle size={20} />
                   </div>
                 </div>
-                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition">
+                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition line-clamp-2">
                   Philanthropy and NGOs require insights, knowledge, tools, and
                   skills to meet the resources including funding for creating impact and sustaining themselves.
                 </p>
