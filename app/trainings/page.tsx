@@ -23,7 +23,11 @@ const trainings: Training[] = [
     date: "July 1, 2019",
     venue: "Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal",
     seats: 20,
-    fee: "NRS 14500/-",
+    fee: "NRS 14,500/-",
+    description: [
+      "Current and prospective donor research",
+      "Building and sustaining a relationship with donors",
+    ],
   },
   {
     id: "/keys-to-fundraising-success-and-capacity-building",
@@ -32,7 +36,7 @@ const trainings: Training[] = [
     date: "June 10, 2019",
     venue: "Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal",
     seats: 25,
-    fee: "NRS 12000/-",
+    fee: "NRS 12,000/-",
     description: [
       "Donor management - how do you retain existing donors and identify new ones?",
       "Story telling. How do you showcase your INGO/ NGO?",
@@ -46,8 +50,13 @@ const TrainingsPage: React.FC = () => {
   return (
     <div className="bg-white font-sans text-gray-800 pt-40 pb-24 px-4">
       {/* Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-6">
         <h2 className="text-3xl md:text-5xl font-extrabold text-black">Trainings</h2>
+      </div>
+
+      {/* Breadcrumb */}
+      <div className="text-center mb-12">
+        <p className="text-blue-600 text-sm font-medium">Home / Trainings</p>
       </div>
 
       {/* Training List */}
@@ -58,7 +67,12 @@ const TrainingsPage: React.FC = () => {
             className="w-full max-w-7xl flex flex-col lg:flex-row gap-10"
           >
             {/* Stretched Image */}
-            <div className="lg:w-[50%] h-64 lg:h-[400px] rounded-2xl overflow-hidden bg-gray-200 relative">
+            <div
+              className={`lg:w-[50%] h-64 lg:h-[400px] rounded-2xl overflow-hidden bg-gray-200 relative
+                ${training.title === "Keys to Fundraising Success and Capacity Building" ? "mt-16" : ""}
+                ${training.title === "Certified Fund Raising Specialist (CFRS) Training of Trainers (ToT)" ? "self-center" : ""}
+              `}
+            >
               <Image
                 src={training.imageSrc}
                 alt={training.title}
@@ -69,8 +83,11 @@ const TrainingsPage: React.FC = () => {
 
             {/* Right Content */}
             <div className="lg:w-[50%] flex flex-col justify-start gap-4">
-              <h1 className="text-3xl font-extrabold text-blue-800 mb-2">
-                {training.title}
+              <h1 className="text-3xl font-extrabold text-blue-800 mb-2 leading-snug">
+                <span className="text-5xl text-blue-800 font-extrabold mr-1">
+                  {training.title.charAt(0)}
+                </span>
+                {training.title.slice(1)}
               </h1>
 
               <p className="text-gray-600 text-sm sm:text-base">
@@ -116,7 +133,7 @@ const TrainingsPage: React.FC = () => {
 
               <a
                 href={training.id}
-                className="inline-block px-8 py-3 rounded-xl text-base font-medium text-white bg-primary w-fit  hover:bg-[#0d83b8]"
+                className="inline-block px-8 py-3 rounded-xl text-base font-medium text-white bg-primary w-fit hover:bg-[#0d83b8]"
               >
                 View Details
               </a>

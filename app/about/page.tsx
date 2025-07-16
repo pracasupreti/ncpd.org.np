@@ -166,10 +166,18 @@ const AboutPage = () => {
         </motion.section>
 
         {/* Objectives */}
-        <motion.section className="bg-white shadow-md rounded-2xl p-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={6}>
-          <h2 className="text-3xl text-center font-semibold text-blue-800 mb-4">Objectives</h2>
-          <ul className="list-disc list-inside space-y-3 text-gray-700">
-            {["Conduct and organize research, training, conferences, seminars, and workshops related to philanthropy, fundraising, communication, and branding.",
+        <motion.section
+          className="bg-white shadow-md rounded-2xl p-8 sm:p-10 space-y-6"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={6}
+        >
+          <h2 className="text-3xl text-center font-bold text-blue-800 mb-6 tracking-tight">Objectives</h2>
+          <ul className="space-y-5 text-gray-700 text-base leading-relaxed">
+            {[
+              "Conduct and organize research, training, conferences, seminars, and workshops related to philanthropy, fundraising, communication, and branding.",
               "Conduct dialogue for enabling environments where philanthropy can thrive.",
               "Work with donors, advisors, financial institutions, corporations, and foundations to advise and encourage giving.",
               "Facilitate networking and collaboration with like-minded philanthropies, fundraisers, funders, and nonprofit organizations.",
@@ -177,22 +185,39 @@ const AboutPage = () => {
               "Support civil society organizations to uphold integrity, transparency, accountability, and professionalism.",
               "Praise and honor ideal and unsung philanthropists."
             ].map((obj, idx) => (
-              <li key={idx} className="hover:text-blue-600 transition">{obj}</li>
+              <li key={idx} className="flex items-start gap-3">
+                <span className="text-blue-600 mt-1">✓</span>
+                <p>{obj}</p>
+              </li>
             ))}
           </ul>
         </motion.section>
 
         {/* Core Values */}
-        <motion.section className="bg-white shadow-md rounded-2xl p-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={7}>
-          <h2 className="text-3xl text-center font-semibold text-blue-800 mb-4">Core Values</h2>
-          <ul className="list-disc list-inside space-y-4 text-gray-700">
-            {["Integrity: We are committed to honesty and sincere adherence to the highest professional, moral, and ethical standards.",
+        <motion.section
+          className="bg-white shadow-md rounded-2xl p-8 sm:p-10 space-y-6"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={7}
+        >
+          <h2 className="text-3xl text-center font-bold text-blue-800 mb-6 tracking-tight">Core Values</h2>
+          <ul className="space-y-5 text-gray-700 text-base leading-relaxed">
+            {[
+              "Integrity: We are committed to honesty and sincere adherence to the highest professional, moral, and ethical standards.",
               "Impact: We believe that philanthropic efforts should support and enhance meaningful work that serves the public good in ways that, whenever possible, are measurable and sustainable.",
               "Inclusion: We value the full participation of communities and individuals and embrace the many forms of diversity, including, but not limited to, ethnic, cultural, racial, religious, sexual orientation, economic status, physical ability, and gender.",
               "Transparency and Accountability: We hold ourselves to the highest standards of organizational integrity and responsible stewardship, which require open, broad, and thorough disclosure of decisions, processes, and procedures.",
               "Collaboration and Partnership: We embrace sharing knowledge and taking collective action to strengthen all parties and effectively leverage resources to achieve common objectives."
             ].map((val, idx) => (
-              <li key={idx} className="hover:text-blue-600 transition"><strong>{val.split(":")[0]}</strong>{val.slice(val.indexOf(":"))}</li>
+              <li key={idx} className="flex items-start gap-3">
+                <span className="text-yellow-500 mt-1">★</span>
+                <p>
+                  <strong>{val.split(":")[0]}</strong>
+                  {val.slice(val.indexOf(":"))}
+                </p>
+              </li>
             ))}
           </ul>
         </motion.section>
