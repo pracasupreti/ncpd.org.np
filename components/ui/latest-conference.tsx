@@ -76,7 +76,7 @@ export default function LatestConferencePage() {
                     <MdCheckCircle size={20} />
                   </div>
                 </div>
-                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition">
+                <p className="text-gray-700 group-hover:text-gray-900 font-medium transition line-clamp-2">
                   Philanthropy and NGOs require insights, knowledge, tools, and
                   skills to meet the resources including funding for creating impact and sustaining themselves.
                 </p>
