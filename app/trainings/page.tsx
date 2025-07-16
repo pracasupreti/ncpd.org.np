@@ -54,9 +54,11 @@ const TrainingsPage: React.FC = () => {
         <h2 className="text-3xl md:text-5xl font-extrabold text-black">Trainings</h2>
       </div>
 
-      {/* Breadcrumb */}
-      <div className="text-center mb-12">
-        <p className="text-blue-600 text-sm font-medium">Home / Trainings</p>
+     {/* Breadcrumb */}
+      <div className="text-center mb-12 text-sm font-medium text-blue-600">
+        <a href="/" className="hover:text-blue-800 transition-colors">Home</a>
+        <span className="mx-1">/</span>
+        <span>Trainings</span>
       </div>
 
       {/* Training List */}
