@@ -212,7 +212,7 @@ const AboutPage = () => {
               "Collaboration and Partnership: We embrace sharing knowledge and taking collective action to strengthen all parties and effectively leverage resources to achieve common objectives."
             ].map((val, idx) => (
               <li key={idx} className="flex items-start gap-3">
-                <span className="text-yellow-500 mt-1">★</span>
+                <span className="text-blue-600 mt-1">✓</span>
                 <p>
                   <strong>{val.split(":")[0]}</strong>
                   {val.slice(val.indexOf(":"))}
