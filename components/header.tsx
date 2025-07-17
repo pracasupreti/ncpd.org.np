@@ -120,39 +120,32 @@ export default function Header() {
                 {navItems.map((item) => (
                   <li key={item.name} className="relative group">
                     {item.dropdown ? (
-                      <div className="group inline-block">
-                        {/* Dropdown Trigger */}
-                        <button className="relative font-semibold text-black hover:text-blue-600 transition-colors duration-300">
+                      <>
+                        <button className="relative font-semibold group text-black hover:text-blue-600 transition-colors duration-300">
                           {item.name}
-                          <svg
-                            className="ml-1 w-3 h-3 inline-block transform transition-transform duration-300 group-hover:rotate-180"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
+                          <svg className="ml-1 w-3 h-3 inline-block transform transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                           </svg>
                         </button>
-
-                        {/* Dropdown Items */}
-                        <ul className="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-30">
-                          {item.dropdown.map((subItem) => (
-                            <li key={subItem.name}>
+                        <ul className="absolute left-0 top-full w-56 bg-white shadow-lg rounded-md overflow-hidden opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-all duration-200 z-30">
+                          {item.dropdown.map((subItem, index) => (
+                            <li
+                              key={subItem.name}
+                              className="relative"
+                            >
                               <a
                                 href={subItem.href}
-                                className="block px-4 py-3 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-100 first:rounded-t-md last:rounded-b-md"
+                                className="block px-4 py-3 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-100 w-full 
+                                first:rounded-t-md last:rounded-b-md"
                               >
                                 {subItem.name}
                               </a>
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </>
                     ) : (
-                      <a
-                        href={item.href}
-                        className="relative font-semibold group text-black hover:text-blue-600 transition-colors duration-300"
-                      >
+                      <a href={item.href} className="relative font-semibold group text-black hover:text-blue-600 transition-colors duration-300">
                         {item.name}
                       </a>
                     )}

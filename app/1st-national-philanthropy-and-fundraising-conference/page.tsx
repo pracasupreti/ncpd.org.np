@@ -135,7 +135,7 @@ const National: React.FC = () => {
                     <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
                         <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
                             Events Details
-                            <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                         </h1>
                         <div className="space-y-3">
                             <div className="flex flex-col sm:flex-row sm:items-center">
@@ -173,7 +173,7 @@ const National: React.FC = () => {
                     <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
                         <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
                             Conference Description
-                            <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                            <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                         </h1>
                         <p className="text-gray-700 leading-relaxed mt-12">
                             One of the main reasons for resource crunch is the shifting of donors' priority from Nepal to other global issues like the refugee, migration, trafficking, combating terrorism, global warming etc. In addition, there is also hope among development partners that the current government will itself tackle the current development given the context of its stability. Consequently, the development cooperation partners are diverting their resources and attention to other countries especially in the conflict affected regions.
@@ -208,7 +208,7 @@ const National: React.FC = () => {
                 <section className="p-6 mb-8">
                     <h1 className="text-4xl font-bold text-gray-800 mb-8 mt-8 self-start">
                         Speakers
-                        <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h1>
                     <SpeakerSection />
                 </section>
@@ -217,7 +217,7 @@ const National: React.FC = () => {
                 <section className="p-6 mb-8">
                     <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
                         Sponsers
-                        <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h1>
                     <Sponsor />
                 </section>
@@ -226,7 +226,7 @@ const National: React.FC = () => {
                 <section className="p-6 mb-8 text-md">
                     <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
                         Organizer
-                        <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h1>
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Nepal Center for Philanthropy and Development (NCPD) is a consulting entity that promotes the culture of philanthropy in Nepal as well as works towards creating high impact, integrity of CSOs. It enhances the talent, trust and treasure of philanthropies and civil society organizations of Nepal for the sustainability of resources and impact. NCPD is a trusted ambassador, partner and member of various global organizations including but not limited to Resource Alliance, UK, Asia Philanthropy Award, Korea, Korean Society of Philanthropy, International Council of Non Profit Management, Alliance for Good, Singapore and participating member of the globally reputed Certified Fund Raising Executive (CFRE).
@@ -276,7 +276,7 @@ const National: React.FC = () => {
                 <section className="p-6 mb-8 text-md">
                     <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
                         Venue
-                        <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h1>
                     <p className="text-gray-700 leading-relaxed mb-4">
                         Hotel Greenwich, Bakhundol, Sanepa, Lalitpur, Nepal
@@ -287,7 +287,7 @@ const National: React.FC = () => {
                 <section className="p-6 mb-8 text-md">
                     <h1 className="text-4xl font-bold text-gray-800 mb-2 mt-2 self-start">
                         Contact
-                        <div className="w-16 h-1 bg-[#0d83b8] rounded-full mt-2"></div>
+                        <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
                     </h1>
                     <p className="text-black text-xl leading-relaxed mb-4">
                         Mr. Rewati Raman Dhakal

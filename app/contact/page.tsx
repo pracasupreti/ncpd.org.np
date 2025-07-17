@@ -1,109 +1,121 @@
 "use client";
-import React from "react";
-import Link from "next/link";
-import { MapPinIcon, PhoneIcon, MailIcon, ArrowRight } from "lucide-react";
+import React, { useState } from "react";
 import LogoSection from "@/components/ui/logo";
+import { PhoneIcon, MailIcon, MapPinIcon, ArrowRight } from "lucide-react";
+import MapSection from "@/components/ui/map";
 
 const ContactPage: React.FC = () => {
+  const [email, setEmail] = useState("");
+
   const handleEmailDraft = () => {
-    const email = "info@ncpd.org.np";
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
     const subject = "Newsletter Inquiry";
-    const body = "Hello,\n\nI would like to subscribe to your newsletter.\n\nBest regards,";
-    
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const body = `Hello,\n\nI would like to subscribe to your newsletter.\n\nBest regards,\n${email}`;
+
+    const mailtoUrl = `mailto:info@ncpd.org.np?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoUrl;
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 px-4 sm:px-8 lg:px-20 pt-40 pb-5">
-      {/* Page Header with Centered Title and Breadcrumb */}
-      <div className="mb-12 text-center">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">
-          Contact
-        </h1>
-        <nav className="text-sm text-blue-600">
-          <Link href="/" className="hover:underline">Home</Link>
-          <span className="mx-1"> / </span>
-          <span className="text-blue-600">Contact</span>
-        </nav>
-      </div>
+    <div className="min-h-screen bg-white text-gray-800">
+      {/* Header */}
+      <header className="pt-28 pb-10 px-4 sm:px-6 lg:px-12 bg-white border-b">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">
+            Contact Us
+          </h1>
+          <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
+            We’d love to hear from you. Reach out using any method below.
+          </p>
+        </div>
+      </header>
 
-      {/* Main Content */}
-      <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-32">
-        {/* Left Section – Contact Details */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-6 text-sm sm:text-base">
+      {/* Contact Info */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 grid lg:grid-cols-2 gap-12">
+        <div className="space-y-8">
           <div>
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
               Nepal Center for Philanthropy & Development
             </h2>
-
-            {/* Location */}
-            <div className="flex items-start gap-3">
-              <MapPinIcon className="h-5 w-5 text-blue-600 mt-1" />
-              <span>Kathmandu, Nepal</span>
-            </div>
-
-            {/* Phone 1 */}
-            <div className="flex items-start gap-3">
-              <PhoneIcon className="h-5 w-5 text-blue-600 mt-1" />
-              <a href="tel:+9779842026513" className="text-black hover:underline">
-                +977 9842026513
-              </a>
-            </div>
-
-            {/* Phone 2 */}
-            <div className="flex items-start gap-3">
-              <PhoneIcon className="h-5 w-5 text-blue-600 mt-1" />
-              <a href="tel:+9779842044215" className="text-black hover:underline">
-                +977 9842044215
-              </a>
-            </div>
-
-            {/* Email */}
-            <div className="flex items-start gap-3">
-              <MailIcon className="h-5 w-5 text-blue-600 mt-1" />
-              <a href="mailto:info@ncpd.org.np" className="text-black hover:underline">
-                info@ncpd.org.np
-              </a>
+            <div className="space-y-5 text-base sm:text-lg">
+              <div className="flex items-start gap-3">
+                <MapPinIcon className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                <span>Kathmandu, Nepal</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <PhoneIcon className="text-blue-600" />
+                <a
+                  href="tel:+9779842026513"
+                  className="text-blue-600 hover:underline"
+                >
+                  +977 9842026513
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <PhoneIcon className="text-blue-600" />
+                <a
+                  href="tel:+9779842044215"
+                  className="text-blue-600 hover:underline"
+                >
+                  +977 9842044215
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <MailIcon className="text-blue-600" />
+                <a
+                  href="mailto:info@ncpd.org.np"
+                  className="text-blue-600 hover:underline"
+                >
+                  info@ncpd.org.np
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right Section – Newsletter */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-start">
-          <h2 className="text-3xl md:text-4xl font-semibold leading-snug mb-6">
-            Subscribe to<br />our organization
-          </h2>
-
-          <p className="text-sm text-gray-600 mb-2">
-            Enter your email below and we’ll get in touch with updates.
-          </p>
-
-          <div className="flex items-center w-full max-w-lg">
-            <div className="relative w-full">
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-2xl font-semibold mb-3">
+              Subscribe to Our Newsletter
+            </h3>
+            <p className="text-gray-600 text-sm mb-4">
+              Enter your email and we’ll contact you with updates.
+            </p>
+            <div className="relative max-w-md">
               <input
                 type="email"
-                placeholder="Your email"
-                className="w-full px-4 py-3 pr-12 rounded-lg bg-gray-100 text-sm focus:outline-none"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 pr-12 rounded-lg bg-gray-100 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
-                type="button"
                 onClick={handleEmailDraft}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
-                title="Send email to info@ncpd.org.np"
+                type="button"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition"
+                title="Send Email"
               >
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Logo Section with increased spacing */}
-      <div className="mt-16 sm:mt-20">
+        {/* Map Section */}
+        <div className="rounded-4xl overflow-hidden">
+          <MapSection />
+        </div>
+      </main>
+
+      {/* Partner Logos */}
+      <div className="bg-gray-50 py-10 px-4 sm:px-6 lg:px-12 border-t">
         <LogoSection />
       </div>
-      
     </div>
   );
 };

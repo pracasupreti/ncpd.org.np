@@ -93,17 +93,17 @@ export default function Footer() {
                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
                   <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
                   <Link
-                    href="/gallery"
+                    href="/core-values"
                     className="text-[16px] relative group"
                   >
-                    Gallery
+                    Core Values of NCPD
                     <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
                   </Link>
                 </div>
                  <div className="flex items-center space-x-1.5 hover:text-secondary group">
                   <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
-                 <Link href="/videos" className="text-[16px] relative group">
-                    Videos
+                 <Link href="/team" className="text-[16px] relative group">
+                    Our Team
                     <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
                   </Link>
                 </div>
@@ -135,7 +135,20 @@ export default function Footer() {
                     <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
                   </Link>
                 </div>
-                
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/gallery" className="text-[16px] relative group">
+                    Gallery
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
+                 <div className="flex items-center space-x-1.5 hover:text-secondary group">
+                  <FaArrowRight className="text-[12px] rotate-300 group-hover:translate-x-1 transition-transform duration-200" />
+                 <Link href="/videos" className="text-[16px] relative group">
+                    Videos
+                    <span className="absolute inset-x-0 bottom-0 h-[2px] bg-secondary scale-x-0 group-hover:scale-x-100 origin-center transition-all duration-300"></span>
+                  </Link>
+                </div>
               </div>
             </div>
 

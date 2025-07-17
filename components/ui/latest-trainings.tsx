@@ -61,7 +61,7 @@ export default function LatestTrainingPage() {
                   width={50} alt={""} 
                   className="rounded-2xl border-2 border-primary p-2" />
                 <div>
-                  <span className="text-3xl text-primary font-bold ">NRS 14,500/-</span>
+                  <span className="text-3xl text-primary font-bold ">NRS 14500/-</span>
                   <p className="text-gray-500 text-base">Fees</p>
                 </div>
               </div>

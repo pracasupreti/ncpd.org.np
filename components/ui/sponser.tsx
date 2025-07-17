@@ -1,8 +1,6 @@
-"use client";
-
-import React from "react";
-import Head from "next/head";
-import Image from "next/image";
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 
 // Reusable Component for Logos
 interface SponsorLogoProps {
@@ -10,22 +8,19 @@ interface SponsorLogoProps {
   alt: string;
   width?: number;
   height?: number;
+  className?: string;
 }
 
-const SponsorLogo: React.FC<SponsorLogoProps> = ({
-  src,
-  alt,
-  width = 120,
-  height = 60,
-}) => {
+const SponsorLogo: React.FC<SponsorLogoProps> = ({ src, alt, width = 120, height = 60, className = '' }) => {
   return (
-    <div className="flex items-center justify-center">
+    <div className={`flex items-center justify-center p-2 ${className}`}>
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        className="object-contain"
+        layout="intrinsic"
+        objectFit="contain"
       />
     </div>
   );
@@ -37,16 +32,13 @@ interface SponsorSectionProps {
   children: React.ReactNode;
 }
 
-const SponsorSection: React.FC<SponsorSectionProps> = ({
-  title,
-  children,
-}) => {
+const SponsorSection: React.FC<SponsorSectionProps> = ({ title, children }) => {
   return (
-    <section className="mb-10">
-      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-orange-800 text-center">
+    <section className="mb-8">
+      <h2 className="text-xl md:text-2xl font-semibold mb-4 text-orange-800">
         {title}
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center justify-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-3 gap-4 items-center justify-center">
         {children}
       </div>
     </section>
@@ -55,59 +47,106 @@ const SponsorSection: React.FC<SponsorSectionProps> = ({
 
 const Sponsor: React.FC = () => {
   return (
-    <div className="min-h-screen py-16 bg-gray-50 font-inter text-gray-800">
+    <div className="min-h-screen py-10">
       <Head>
         <title>Our Sponsors & Partners</title>
         <meta name="description" content="Meet our valued sponsors and partners." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container mx-auto px-4 sm:px-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+      <main className="container mx-auto px-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900">
           Our Valued Sponsors & Partners
         </h1>
-
-        {/* Non-Profit Partner */}
+         
+         <div className='flex flex-col lg:flex-row space-x-8'>
+        {/* Non-Profit Partner Section */}
         <SponsorSection title="Non-Profit Partner">
-          <SponsorLogo src="/sponsers/Youth-vision1.jpg" alt="Youth Vision" width={180} height={90} />
+          <Image
+            src="/sponsers/Youth-vision1.jpg"
+            alt="Youth Vision"
+            width={180}
+            height={90}
+          />
         </SponsorSection>
 
-        {/* Knowledge Partner */}
+        {/* Knowledge Partner Section */}
         <SponsorSection title="Knowledge Partner">
-          <SponsorLogo src="/sponsers/suvadin1.jpg" alt="Suvadin" width={150} height={75} />
-          <SponsorLogo src="/sponsers/kings-college.png" alt="King's College" width={150} height={75} />
+          <Image
+            src="/sponsers/suvadin1.jpg"
+            alt="Suvadin"
+            width={150}
+            height={75}
+          />
+          <Image
+            src="/sponsers/kings-college.png"
+            alt="King's College"
+            width={150}
+            height={75}
+          />
         </SponsorSection>
-
-        {/* Gold Sponsors */}
+        </div>
+        {/* Gold Sponsors Section */}
         <SponsorSection title="Gold Sponsors">
-          <SponsorLogo src="/sponsers/Ipas-Nepal.jpg" alt="IPAS Nepal" width={200} height={100} />
+          <Image
+            src="/sponsers/Ipas-Nepal.jpg"
+            alt="IPAS Nepal"
+            width={200}
+            height={100}
+          />
         </SponsorSection>
 
-        {/* Silver Sponsors */}
+
+        {/* Silver Sponsors Section */}
         <SponsorSection title="Silver Sponsors">
-          <SponsorLogo src="/sponsers/Goal-busters.jpg" alt="Goalbusters" />
-          <SponsorLogo src="/sponsers/Accountability-Lab.jpg" alt="Accountability Lab Nepal" />
-          <SponsorLogo src="/sponsers/motif.jpg" alt="Motif" />
-          <SponsorLogo src="/sponsers/debenara.jpg" alt="Gorkha Welfare Trust" />
-          <SponsorLogo src="/sponsers/Voice of Children.jpg" alt="Voice of Children" />
+          <Image
+            src="/sponsers/Goal-busters.jpg"
+            alt="Goalbusters"
+            width={120}
+            height={60}
+          />
+          <Image
+            src="/sponsers/Accountability-Lab.jpg"
+            alt="Accountability Lab Nepal"
+            width={150}
+            height={75}
+          />
+          <Image
+            src="/sponsers/motif.jpg"
+            alt="Motif"
+            width={120}
+            height={60}
+          />
+          <Image
+            src="/sponsers/debenara.jpg"
+            alt="Gorkha Welfare Trust"
+            width={100}
+            height={50}
+          />
+          <Image
+            src="/sponsers/Voice of Children.jpg"
+            alt="Voice of Children"
+            width={120}
+            height={60}
+          />
         </SponsorSection>
 
-        {/* Bronze Sponsors */}
+        {/* Bronze Sponsors Section */}
         <SponsorSection title="Bronze Sponsors">
-          <SponsorLogo src="/sponsers/sosec.jpg" alt="SOSEC Nepal Dailekh" />
-          <SponsorLogo src="/sponsers/NRDSC.jpg" alt="Nepal Bank Limited" />
-          <SponsorLogo src="/sponsers/csdc-150.jpg" alt="Nepal Tourism Board" />
-          <SponsorLogo src="/sponsers/Save%20the%20earth.jpg" alt="National Cooperative Bank" />
-          <SponsorLogo src="/sponsers/csrc.jpg" alt="CSRC" />
-          <SponsorLogo src="/sponsers/mahila-shakti-bikas-center.jpg" alt="Women Empowerment" />
-          <SponsorLogo src="/sponsers/NRDSC.jpg" alt="Social Awareness" />
-          <SponsorLogo src="/sponsers/aasaman-nepal.jpg" alt="Aasman Nepal" />
-          <SponsorLogo src="/sponsers/Antarprerana.png" alt="Antarprerana" />
-          <SponsorLogo src="/sponsers/kavach.jpg" alt="Kavach" />
-          <SponsorLogo src="/sponsers/diyalo-international.png" alt="Diyalo International" />
-          <SponsorLogo src="/sponsers/JWAS.jpg" alt="JWAS" />
-          <SponsorLogo src="/sponsers/Project-sarangi.png" alt="Project Sarangi" />
-          <SponsorLogo src="/sponsers/bikalpaanalternative.jpg" alt="Bikalpa an Alternative" />
+          <Image src="/sponsers/sosec.jpg" alt="SOSEC Nepal Dailekh" width={100} height={50} />
+          <Image src="/sponsers/NRDSC.jpg" alt="Nepal Bank Limited" width={100} height={50} />
+          <Image src="/sponsers/csdc-150.jpg" alt="Nepal Tourism Board" width={100} height={50} />
+          <Image src="/sponsers/Save%20the%20earth.jpg" alt="National Cooperative Bank" width={100} height={50} />
+          <Image src="/sponsers/csrc.jpg" alt="CSTC" width={100} height={50} />
+          <Image src="/sponsers/mahila-shakti-bikas-center.jpg" alt="Women Empowerment" width={100} height={50} />
+          <Image src="/sponsers/NRDSC.jpg" alt="Social Awareness" width={100} height={50} />
+          <Image src="/sponsers/aasaman-nepal.jpg/sponsers/ananta-nepal.png" alt="Aasman Nepal" width={100} height={50} />
+          <Image src="/sponsers/Antarprerana.png" alt="Antar Rerana" width={100} height={50} />
+          <Image src="/sponsers/kavach.jpg" alt="Kavach" width={100} height={50} />
+          <Image src="/sponsers/diyalo-international.png" alt="Diyaalo International" width={100} height={50} />
+          <Image src="/sponsers/JWAS.jpg" alt="NHA" width={100} height={50} />
+          <Image src="/sponsers/Project-sarangi.png" alt="Project Sarang" width={100} height={50} />
+          <Image src="/sponsers/bikalpaanalternative.jpg" alt="Bikalpa" width={100} height={50} />
         </SponsorSection>
       </main>
     </div>
