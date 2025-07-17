@@ -75,6 +75,10 @@ const ContactPage: React.FC = () => {
             Subscribe to<br />our organization
           </h2>
 
+          <p className="text-sm text-gray-600 mb-2">
+            Enter your email below and we’ll get in touch with updates.
+          </p>
+
           <div className="flex items-center w-full max-w-lg">
             <div className="relative w-full">
               <input
@@ -91,20 +95,15 @@ const ContactPage: React.FC = () => {
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-            
           </div>
         </div>
       </div>
 
-      {/* Logo Section with reduced margin */}
-      <div className="mt-6">
+      {/* Logo Section with increased spacing */}
+      <div className="mt-16 sm:mt-20">
         <LogoSection />
       </div>
-
-      {/* Footer */}
-      <div className="mt-6 text-center text-xs text-gray-500">
-        ©2024 NCPD — Nepal Center for Philanthropy & Development
-      </div>
+      
     </div>
   );
 };
