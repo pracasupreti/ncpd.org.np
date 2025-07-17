@@ -16,7 +16,7 @@ const MapSection: React.FC = () => {
         </div>
       </header> */}
 
-      <main className="container mx-auto px-4 md:px-8 lg:px-16 py-0 lg:py-8">
+      <main className="mx-auto">
         <div className="overflow-hidden">
 
           {/* Google Map Embed */}
