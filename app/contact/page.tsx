@@ -131,7 +131,7 @@ const ContactPage: React.FC = () => {
   <div className="text-center mb-8">
     <h1 className="text-3xl sm:text-4xl font-extrabold text-primary mb-2">Visit Us</h1>
     <p className="text-gray-600 text-base sm:text-sm">
-      Our office is located in the heart of Kathmandu, Nepal. We'd love to welcome you in person!
+      Our office is located in the heart of Bhanimandal, Lalitpur, Nepal. We'd love to welcome you in person!
     </p>
   </div>
 
