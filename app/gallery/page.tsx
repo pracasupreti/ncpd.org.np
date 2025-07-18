@@ -60,7 +60,7 @@ const GalleryPage: React.FC = () => {
             onClick={() => openModal(item)}
             className="cursor-pointer"
           >
-            <div className="w-72 h-48 relative overflow-hidden rounded-xl shadow-md">
+            <div className="w-72 h-48 relative overflow-hidden rounded-xl">
               <Image
                 src={item.imageSrc}
                 alt={item.title}
@@ -78,7 +78,7 @@ const GalleryPage: React.FC = () => {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 backdrop-blur-md flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center"
           onClick={closeModal}
         >
           <div
