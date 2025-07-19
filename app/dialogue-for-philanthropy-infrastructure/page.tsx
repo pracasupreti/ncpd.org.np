@@ -16,7 +16,7 @@ export default function DialogueForPhilanthropyInfrastructurePage() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Header */}
-      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200 shadow-md">
+      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200">
         <motion.h1
           className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-2"
           initial="hidden"

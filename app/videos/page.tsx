@@ -84,7 +84,7 @@ const VideoCard: React.FC<{ video: Video }> = ({ video }) => {
           </button>
 
           {showOptions && (
-            <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-white border border-gray-200 shadow-lg rounded-md p-3 z-20 w-48">
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-md p-3 z-20 w-48">
               <button
                 onClick={handleCopy}
                 className="flex items-center gap-2 text-sm text-gray-700 hover:text-blue-600 w-full mb-2"
