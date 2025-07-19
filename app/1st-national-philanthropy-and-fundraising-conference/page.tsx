@@ -119,7 +119,7 @@ const National: React.FC = () => {
 
             <main className="container mx-auto px-4 md:px-8 lg:px-24 py-12">
                 {/* Hero Section */}
-                <section className="relative bg-white rounded-lg shadow-md overflow-hidden mb-8">
+                <section className="relative bg-white rounded-lg overflow-hidden mb-8">
                     <div className="w-full h-64 sm:h-80 md:h-[28rem] lg:h-[30rem] xl:h-[30rem] relative">
                         <img
                             src="/home/ncpd-first-national-funraising-conference.png"
@@ -132,7 +132,7 @@ const National: React.FC = () => {
                 {/* Event Details and Conference Description */}
                 <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
                     {/* Event Details */}
-                    <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
+                    <div className="lg:col-span-1 bg-white p-6 rounded-lg">
                         <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
                             Events Details
                             <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
@@ -170,7 +170,7 @@ const National: React.FC = () => {
                     </div>
 
                     {/* Conference Description */}
-                    <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-md">
+                    <div className="lg:col-span-2 bg-white p-6 rounded-lg">
                         <h1 className="text-4xl font-bold text-gray-800 mb-2 self-start">
                             Conference Description
                             <div className="w-16 h-1 bg-green-500 rounded-full mt-2"></div>
@@ -182,7 +182,7 @@ const National: React.FC = () => {
                 </section>
 
                 {/* Tabs Navigation */}
-                <section className="bg-white rounded-lg shadow-md mb-8 p-2">
+                <section className="bg-white rounded-lg mb-8 p-2">
                     <div className="flex flex-wrap border-b border-gray-200">
                         {['Background', 'Objective', 'Areas/Topics', 'Schedule', 'Registration', 'FAQ', 'Video', 'Download'].map((tab) => (
                             <button

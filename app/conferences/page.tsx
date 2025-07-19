@@ -6,7 +6,7 @@ export default function ConferencesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 font-inter antialiased flex flex-col">
       {/* Header Section */}
-      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200 shadow-md">
+      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200">
         <h1 className="text-4xl md:text-6xl font-extrabold text-blue-900 mb-2">
           Conferences
         </h1>

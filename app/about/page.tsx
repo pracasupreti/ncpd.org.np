@@ -100,7 +100,7 @@ const AboutPage = () => {
 
       {/* Static Image */}
       <motion.div initial="hidden" whileInView="visible" variants={fadeUp} className="w-full flex justify-center py-6">
-        <img src="/about/ncpd-logo.png" alt="NCPD Highlight" className="w-1/2 h-auto object-contain shadow-lg rounded-xl" />
+        <img src="/about/ncpd-logo.png" alt="NCPD Highlight" className="w-1/2 h-auto object-contain rounded-xl" />
       </motion.div>
 
       {/* Main Content */}
@@ -116,14 +116,14 @@ const AboutPage = () => {
         <motion.section className="py-12" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={3}>
           {/* Tab Buttons */}
           <div className="flex justify-center mb-8">
-            <div className="bg-white rounded-xl p-1 shadow-lg border border-gray-200">
+            <div className="bg-white rounded-xl p-1 border border-gray-200">
               {(['vision', 'mission', 'goal'] as const).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
                   className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 ${
                     activeTab === tab
-                      ? 'bg-blue-600 text-white shadow-md'
+                      ? 'bg-blue-600 text-white'
                       : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
                   }`}
                 >
