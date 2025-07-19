@@ -78,7 +78,7 @@ const GalleryPage: React.FC = () => {
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/30 backdrop-blur-md flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/30 flex items-center justify-center"
           onClick={closeModal}
         >
           <div

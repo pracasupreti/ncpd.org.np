@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// News Data
 interface NewsItem {
   id: string;
   title: string;
@@ -99,7 +98,7 @@ const NewsPage: React.FC = () => {
           <Link
             href={item.href}
             key={item.id}
-            className="group relative block overflow-hidden rounded-lg shadow-md transition-transform hover:scale-[1.01]"
+            className="group relative block overflow-hidden rounded-lg transition-transform hover:scale-[1.01]"
           >
             <div className="relative w-full h-56 sm:h-60 md:h-64">
               <Image

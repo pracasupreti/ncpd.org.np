@@ -57,13 +57,8 @@ const AboutPage = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'goal'>('vision');
 
-  const openModal = (member: TeamMember) => {
-    setSelectedMember(member);
-  };
-
-  const closeModal = () => {
-    setSelectedMember(null);
-  };
+  const openModal = (member: TeamMember) => setSelectedMember(member);
+  const closeModal = () => setSelectedMember(null);
 
   const tabContent = {
     vision: {
@@ -88,8 +83,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 font-inter antialiased flex flex-col">
-      {/* Header */}
-      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200 shadow-md">
+      <header className="pt-36 pb-8 px-4 sm:px-8 md:px-16 text-center bg-gradient-to-r from-blue-100 via-white to-blue-200">
         <motion.h1 className="text-4xl md:text-6xl font-extrabold text-blue-900 mb-2" initial="hidden" animate="visible" variants={fadeUp}>
           About NCPD
         </motion.h1>
@@ -98,23 +92,20 @@ const AboutPage = () => {
         </nav>
       </header>
 
-      {/* Static Image */}
       <motion.div initial="hidden" whileInView="visible" variants={fadeUp} className="w-full flex justify-center py-6">
         <img src="/about/ncpd-logo.png" alt="NCPD Highlight" className="w-1/2 h-auto object-contain rounded-xl" />
       </motion.div>
 
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-12 space-y-10 text-gray-800 leading-relaxed">
-        {["NCPD is an organization dedicated to creating an enabling environment and opportunities for capacity building, networking, and collaboration whereby philanthropy and civil society organizations will grow.",
+        {[
+          "NCPD is an organization dedicated to creating an enabling environment and opportunities for capacity building, networking, and collaboration whereby philanthropy and civil society organizations will grow.",
           "It conducts research, training, conferences, seminars, and workshops related to philanthropy, civil society organizations, fundraising, and communication. It also provides technical support in developing strategic plans and facilitates dialogue to make philanthropy and civil society organizations more efficient and effective. Importantly, it advocates for favorable policies and infrastructure that foster philanthropy in Nepal.",
-          "NCPD's ultimate goal is to support and enhance the capacity, credibility, impact, and sustainability of philanthropy and civil society organizations.",
+          "NCPD's ultimate goal is to support and enhance the capacity, credibility, impact, and sustainability of philanthropy and civil society organizations."
         ].map((text, index) => (
           <motion.p key={index} className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-base sm:text-lg text-gray-800 leading-relaxed" initial="hidden" animate="visible" custom={1} variants={fadeUp}>{text}</motion.p>
         ))}
 
-        {/* Vision, Mission, Goal - Tabbed Interface */}
         <motion.section className="py-12" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={3}>
-          {/* Tab Buttons */}
           <div className="flex justify-center mb-8">
             <div className="bg-white rounded-xl p-1 border border-gray-200">
               {(['vision', 'mission', 'goal'] as const).map((tab) => (
@@ -133,7 +124,6 @@ const AboutPage = () => {
             </div>
           </div>
 
-          {/* Tab Content */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 20 }}
@@ -148,13 +138,13 @@ const AboutPage = () => {
                   <p className="text-gray-700 leading-relaxed">{tabContent[activeTab].text}</p>
                 </div>
                 <div className="w-full h-full">
-                  <img src={tabContent[activeTab].image} alt={tabContent[activeTab].alt} className="w-full h-auto rounded-xl shadow-lg object-cover" />
+                  <img src={tabContent[activeTab].image} alt={tabContent[activeTab].alt} className="w-full h-auto rounded-xl object-cover" />
                 </div>
               </>
             ) : (
               <>
                 <div className="w-full h-full">
-                  <img src={tabContent[activeTab].image} alt={tabContent[activeTab].alt} className="w-full h-auto rounded-xl shadow-lg object-cover" />
+                  <img src={tabContent[activeTab].image} alt={tabContent[activeTab].alt} className="w-full h-auto rounded-xl object-cover" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-blue-800 mb-4">{tabContent[activeTab].title}</h2>
@@ -165,15 +155,7 @@ const AboutPage = () => {
           </motion.div>
         </motion.section>
 
-        {/* Objectives */}
-        <motion.section
-          className="bg-white shadow-md rounded-2xl p-8 sm:p-10 space-y-6"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={6}
-        >
+        <motion.section className="bg-white rounded-2xl p-8 sm:p-10 space-y-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={6}>
           <h2 className="text-3xl text-center font-bold text-blue-800 mb-6 tracking-tight">Objectives</h2>
           <ul className="space-y-5 text-gray-700 text-base leading-relaxed">
             {[
@@ -193,41 +175,29 @@ const AboutPage = () => {
           </ul>
         </motion.section>
 
-        {/* Core Values */}
-        <motion.section
-          className="bg-white shadow-md rounded-2xl p-8 sm:p-10 space-y-6"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={7}
-        >
+        <motion.section className="bg-white rounded-2xl p-8 sm:p-10 space-y-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={7}>
           <h2 className="text-3xl text-center font-bold text-blue-800 mb-6 tracking-tight">Core Values</h2>
           <ul className="space-y-5 text-gray-700 text-base leading-relaxed">
             {[
               "Integrity: We are committed to honesty and sincere adherence to the highest professional, moral, and ethical standards.",
               "Impact: We believe that philanthropic efforts should support and enhance meaningful work that serves the public good in ways that, whenever possible, are measurable and sustainable.",
-              "Inclusion: We value the full participation of communities and individuals and embrace the many forms of diversity, including, but not limited to, ethnic, cultural, racial, religious, sexual orientation, economic status, physical ability, and gender.",
-              "Transparency and Accountability: We hold ourselves to the highest standards of organizational integrity and responsible stewardship, which require open, broad, and thorough disclosure of decisions, processes, and procedures.",
-              "Collaboration and Partnership: We embrace sharing knowledge and taking collective action to strengthen all parties and effectively leverage resources to achieve common objectives."
+              "Inclusion: We value the full participation of communities and individuals and embrace the many forms of diversity...",
+              "Transparency and Accountability: We hold ourselves to the highest standards of organizational integrity and responsible stewardship...",
+              "Collaboration and Partnership: We embrace sharing knowledge and taking collective action..."
             ].map((val, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <span className="text-blue-600 mt-1">✓</span>
-                <p>
-                  <strong>{val.split(":")[0]}</strong>
-                  {val.slice(val.indexOf(":"))}
-                </p>
+                <p><strong>{val.split(":")[0]}</strong>{val.slice(val.indexOf(":"))}</p>
               </li>
             ))}
           </ul>
         </motion.section>
 
-        {/* Our Team */}
         <motion.section className="py-12" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <motion.div key={index} className="bg-white rounded-2xl p-6 shadow-md text-center hover:shadow-lg transition-all duration-300">
+              <motion.div key={index} className="bg-white rounded-2xl p-6 text-center transition-all duration-300">
                 <img src={member.image} alt={member.name} className="w-32 h-32 mx-auto rounded-full object-cover mb-4" />
                 <h3 className="text-xl font-semibold text-blue-800 mb-2">{member.name}</h3>
                 <p className="text-sm text-gray-600 mb-4">{member.title}</p>
@@ -243,12 +213,10 @@ const AboutPage = () => {
         </motion.section>
       </main>
 
-      {/* Partner Logos */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="px-0">
         <LogoSection />
       </motion.div>
 
-      {/* Modal */}
       <AnimatePresence>
         {selectedMember && (
           <motion.div
@@ -264,17 +232,13 @@ const AboutPage = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-8">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center space-x-4">
-                    <img 
-                      src={selectedMember.image} 
-                      alt={selectedMember.name} 
-                      className="w-20 h-20 rounded-full object-cover"
-                    />
+                    <img src={selectedMember.image} alt={selectedMember.name} className="w-20 h-20 rounded-full object-cover" />
                     <div>
                       <h3 className="text-2xl font-bold text-blue-900">{selectedMember.name}</h3>
                       <p className="text-blue-600 font-medium">{selectedMember.title}</p>
@@ -287,7 +251,6 @@ const AboutPage = () => {
                     <X size={24} />
                   </button>
                 </div>
-                
                 <div className="text-gray-700 leading-relaxed">
                   <h4 className="text-lg font-semibold text-blue-800 mb-3">Biography</h4>
                   <p>{selectedMember.bio}</p>
